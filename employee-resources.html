@@ -33,6 +33,13 @@
             alert("Please view this in a modern browser such as Chrome or Microsoft Edge.");
             renderPage = false;
         }
+
+	function forms(frm){
+		document.getElementById("timeclock_frm").visibility = "none";
+		if (frm == "timeclock"){
+			document.getElementById("timeclock_frm").visibility = "visible";
+		}
+	}
     </script>
 
 </head>
@@ -120,7 +127,7 @@
                 </div>
             </div>
         </section>
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfT43EQMQche4iS0Lv3k0N7uqymf8Bu5lunH2TNQ8RwMaHpsA/viewform?embedded=true" width="640" height="1329" frameborder="0" marginheight="0" marginwidth="0" id="timeclock_page">Loading…</iframe>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfT43EQMQche4iS0Lv3k0N7uqymf8Bu5lunH2TNQ8RwMaHpsA/viewform?embedded=true" width="640" height="1329" frameborder="0" marginheight="0" marginwidth="0" id="timeclock_frm" style="visibility: none">Loading…</iframe>
         
         <footer class="mt-5">
             <p class="text-center">Copyright © 2023 Future Care LLC</p>
