@@ -36,8 +36,39 @@
 
 	function forms(frm){
 		document.getElementById("timeclock_frm").display = "none";
+		document.getElementById("behavior_frm").display = "none";
+		document.getElementById("110_communications_frm").display = "none";
+		document.getElementById("112_communications_frm").display = "none";
+		document.getElementById("114_communications_frm").display = "none";
+		document.getElementById("116_communications_frm").display = "none";
+		document.getElementById("timbercreek_communications_frm").display = "none";
 		if (frm == "timeclock"){
 			document.getElementById("timeclock_frm").display = "block";
+		}
+		else if (frm == "behaviors"){
+			document.getElementById("behavior_frm").display = "block";
+		}
+		else if (frm == "communications"){
+			key = window.prompt("House Key","")
+			if(key == "110"){
+				document.getElementById("110_communications_frm").display = "block"
+			}
+			else if(key == "112"){
+				document.getElementById("112_communications_frm").display = "block"
+			}
+			else if(key == "114"){
+				document.getElementById("114_communications_frm").display = "block"
+			}
+			else if(key == "116"){
+				document.getElementById("116_communications_frm").display = "block"
+			}
+			else if(key == "timbercreek"){
+				document.getElementById("timbercreek_communications_frm").display = "block"
+			}
+			//todo: rest of houses
+			else {
+				alert("Inactive Key");
+			}
 		}
 	}
     </script>
@@ -76,7 +107,13 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link tm-text-gray" href="#tm-section-2">Time Clock</a>
+                            <a class="nav-link tm-text-gray" href="#tm-section-2" onclick="forms('timeclock')">Time Clock</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link tm-text-gray" href="#tm-section-2" onclick="forms('behaviors')">Behaviors</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link tm-text-gray" href="#tm-section-2" onclick="forms('communications')">Communications</a>
                         </li>
                     </ul>
                 </div>
@@ -127,9 +164,30 @@
                 </div>
             </div>
         </section>
+
 	<div id="timeclock_frm" style="display: none">
 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfT43EQMQche4iS0Lv3k0N7uqymf8Bu5lunH2TNQ8RwMaHpsA/viewform?embedded=true" width="640" height="1329" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
         </div>
+	<div id="behaviors_frm" style="display: none">
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfT43EQMQche4iS0Lv3k0N7uqymf8Bu5lunH2TNQ8RwMaHpsA/viewform?embedded=true" width="640" height="1329" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </div>
+	<!--communications forms-->
+	<div id="110_communications_frm" style="display: none">
+
+        </div>
+	<div id="112_communications_frm" style="display: none">
+
+        </div>
+	<div id="114_communications_frm" style="display: none">
+
+        </div>
+	<div id="116_communications_frm" style="display: none">
+
+        </div>
+	<div id="timbercreek_communications_frm" style="display: none">
+
+        </div>
+
         <footer class="mt-5">
             <p class="text-center">Copyright © 2023 Future Care LLC</p>
         </footer>
