@@ -26,20 +26,67 @@
 
     <script>
         var renderPage = true;
-
+	let onetenkey = "110";
+	let onetwelvekey = "112";
+	let onefourteenkey = "114";
+	let onesixteenkey = "116";
+	let timberkey = "timber";
+	var pass;
         if (navigator.userAgent.indexOf('MSIE') !== -1
             || navigator.appVersion.indexOf('Trident/') > 0) {
             /* Microsoft Internet Explorer detected in. */
             alert("Please view this in a modern browser such as Chrome or Microsoft Edge.");
             renderPage = false;
         }
-
 	function employee_password() {
-		let pass = window.prompt("Password:","")
-		if(pass == "Futurecare1111"){
-			window.open("employee-resources.html");
+		window.pass = window.prompt("Password:","")
+		if(pass == onetenkey || pass == onetwelvekey || pass == onefourteenkey || pass == onesixteenkey || pass == timberkey){
+			document.getElementById("employee-nav").style.display = "block";
 		}
-		window.alert("Incorrect Password!");
+		else{
+			window.alert("Incorrect Password!");
+		}
+	}
+	function frms(frms){
+		if(frms == 'timeclock'){
+			window.open("https://docs.google.com/forms/d/e/1FAIpQLSfT43EQMQche4iS0Lv3k0N7uqymf8Bu5lunH2TNQ8RwMaHpsA/viewform?usp=sf_link")
+		}
+		else if(frms == 'behaviors'){
+			//TODO
+			window.open("")
+			alert('behaviors clicked')
+		}
+		else if(frms == 'communications'){
+			alert('communications clicked')
+			if(pass == onetenkey){	
+				let option = window.prompt("1) Submit new communication. 2) View communications","")
+				if(option == "1"){
+					window.open("https://docs.google.com/forms/d/e/1FAIpQLSfgwCIhvNudSK51NhK01PeMyK8AeeT0sGGQD_qIzcun-uyL3w/viewform?usp=sf_link");
+				}
+				else if(option == "2"){
+					window.open("https://docs.google.com/spreadsheets/d/1BgsbeKTfj2c3acuQi4A3SCe3ZyG-UPZXwfFbT1CXZmw/edit?usp=sharing");
+				}
+			}
+		}
+		else if(frms == 'daily'){
+			alert('daily tasks clicked')
+			if(pass == onetenkey){
+				let option = window.prompt("1) Submit new communication. 2) View communications","")
+				if(option == "1"){
+					window.open("https://docs.google.com/forms/d/e/1FAIpQLSfgwCIhvNudSK51NhK01PeMyK8AeeT0sGGQD_qIzcun-uyL3w/viewform?usp=sf_link");
+				}
+				else if(option == "2"){
+					window.open("https://docs.google.com/spreadsheets/d/1BgsbeKTfj2c3acuQi4A3SCe3ZyG-UPZXwfFbT1CXZmw/edit?usp=sharing");
+				}
+			}
+		}
+		else if(frms == 'pdf'){
+			window.open("https://docs.google.com/forms/d/e/1FAIpQLSctu28igUup9L89-yCPJUHujw0kv77TMuI10Fff9LZQvbPZxA/viewform?usp=sf_link")
+		}
+		else if(frms == 'policies'){
+			window.open("")
+			alert('policies and procedures clicked')
+		}
 	}
     </script>
 
@@ -88,6 +135,12 @@
                     </ul>
                 </div>
             </nav>
+	<p id="employee-nav" style="display: none">
+			<a style="padding-right: 5%" class="tm-text-gray" onclick="frms('timeclock')">Time Clock</a>
+			<a style="padding-right: 5%" class="tm-text-gray" onclick="frms('communications')">Communications</a>
+			<a style="padding-right: 5%" class="tm-text-gray" onclick="frms('behaviors')">Behaviors</a>
+			<a style="padding-right: 5%" class="tm-text-gray" onclick="frms('pdf')">PDF Reports</a>
+	</p>
 
             <div class="navbar navbar-default navbar-fixed-top">
                 <a href="/index.html" class="navbar-brand"></a>
@@ -160,10 +213,11 @@
 
                 <div class="col-xl-4 col-lg-4 col-md-12">
                     <h2>Contact Us</h2>
+			<p>604 Black Street, Rolla, MO - 65401<br>(573) 578-2303</p>
                 </div>
             </div>
         </section>
-
+<!--
         <section class="tm-section-3 tm-section-mb" id="tm-section-3">
             <div class="row">
                 <div class="col-md-6 tm-mb-sm-4 tm-2col-l">
@@ -272,6 +326,7 @@
                 </div>
             </div>
         </section>
+-->
         <footer class="mt-5">
             <p class="text-center">Copyright © 2023 Future Care LLC</p>
         </footer>
