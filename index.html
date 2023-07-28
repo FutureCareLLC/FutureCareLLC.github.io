@@ -33,35 +33,7 @@
 	let timberkey = "timber";
 	var pass;
 	document.addEventListener('contextmenu', event => event.preventDefault());
-	document.onkeydown = function(e)
-    {
-        if(event.keyCode == 123)
-        {
-            return false;
-        }
-        if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0))
-        {
-            return false;
-        }
-        if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0))
-        {
-            return false;
-        }
-        if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0))
-        {
-            return false;
-        }
-    if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0))
-    {
-      return false;
-    }
-    }
-        if (navigator.userAgent.indexOf('MSIE') !== -1
-            || navigator.appVersion.indexOf('Trident/') > 0) {
-            /* Microsoft Internet Explorer detected in. */
-            alert("Please view this in a modern browser such as Chrome or Microsoft Edge.");
-            renderPage = false;
-        }
+	
 	function employee_password() {
 		window.pass = window.prompt("Password:","")
 		if(pass == onetenkey || pass == onetwelvekey || pass == onefourteenkey || pass == onesixteenkey || pass == timberkey){
