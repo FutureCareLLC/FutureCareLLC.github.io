@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html>
 
 <head>
     <meta charset="utf-8">
@@ -32,11 +33,99 @@
 	let timberkey = "timber";
 	var pass;
 	document.addEventListener('contextmenu', event => event.preventDefault());
-	
+	document.onkeydown = function(e)
+    {
+        if(event.keyCode == 123)
+        {
+            return false;
+        }
+        if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0))
+        {
+            return false;
+        }
+        if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0))
+        {
+            return false;
+        }
+        if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0))
+        {
+            return false;
+        }
+    if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0))
+    {
+      return false;
+    }
+    }
+        if (navigator.userAgent.indexOf('MSIE') !== -1
+            || navigator.appVersion.indexOf('Trident/') > 0) {
+            /* Microsoft Internet Explorer detected in. */
+            alert("Please view this in a modern browser such as Chrome or Microsoft Edge.");
+            renderPage = false;
+        }
 	function employee_password() {
 		window.pass = window.prompt("Password:","")
 		if(pass == onetenkey || pass == onetwelvekey || pass == onefourteenkey || pass == onesixteenkey || pass == timberkey){
 			document.getElementById("employee-nav").style.display = "block";
+			//insert comms here
+			let temparr = [];
+			let onetenarr = [];
+			let onetwelvearr = [];
+			let onefourteenarr = [];
+			let onesixteenarr = [];
+			let timberarr = [];
+			var checked = "False";
+			function importantcomms(){
+				if(document.getElementById('testing').textContent.includes("]")){
+					thearray = document.getElementById('testing').textContent.split("],[");
+					i = thearray.length
+					x = 0
+						temparr = temparr.concat(thearray[0]);
+					if(checked == "False"){
+						while(x < i){
+							if(thearray[x].includes("110") && pass == onetenkey){
+								onetenarr = onetenarr.concat(thearray[x]);
+								checked = "True";
+							}
+							else if(thearray[x].includes("112") && pass == onetwelvekey){
+								onetwelvearr = onetwelvearr.concat(thearray[x]);
+								checked = "True";
+							}
+							else if(thearray[x].includes("114") && pass == onefourteenkey){
+								onefourteenarr = onefourteenarr.concat(thearray[x]);
+								checked = "True";
+							}
+							else if(thearray[x].includes("116") && pass == onesixteenkey){
+								onesixteenarr = onesixteenarr.concat(thearray[x]);
+								checked = "True";
+							}
+							else if(thearray[x].includes("timber") && pass == timberkey){
+								timberarr = timberarr.concat(thearray[x]);
+								checked = "True";
+							}
+							x++;
+						}
+						//show comm alerts
+						if (pass == onetenkey){
+							temparr = onetenarr[onetenarr.length - 1].split(',');	
+						}
+						else if (pass == onetwelvekey){
+							temparr = onetwelvearr[onetwelvearr.length - 1].split(',');	
+						}
+						else if (pass == onefourteenkey){
+							temparr = onefourteenarr[onefourteenarr.length - 1].split(',');	
+						}
+						else if (pass == onesixteenkey){
+							temparr = onesixteenarr[onesixteenarr.length - 1].split(',');	
+						}
+						else if (pass == timberkey){
+							temparr = timberarr[timberarr.length - 1].split(',');	
+						}
+						tempstr = "Important House Communication: " + temparr[2].replace('"','').replace('"','').replace("[","").replace("[","").replace("]","").replace("]","");
+						document.getElementById('important-comms-house').textContent = tempstr;
+					}
+				}
+			};
+			setInterval(importantcomms, 3000);
 		}
 		else{
 			window.alert("Incorrect Password!");
@@ -80,12 +169,13 @@
 			window.open("https://docs.google.com/document/d/1PB2mUZGqUUPPxRa4yelt-pAe60BOMxQtf2R53Vf-E88/edit?usp=sharing")
 		}
 	}
-	fetch('"https://docs.google.com/spreadsheets/d/1LupCEnELoLmfVJ--_bk5m_evDWNnwsHI-VRaKw9C2iQ/edit?resourcekey#gid=493990400').then(res => res.json()).then(data => console.log(data));
     </script>
 
 </head>
 
 <body>
+	<p id='testing' style="display: none"></p>
+	<p id='important-comms-house'></p>
     <!-- Loader -->
     <div id="loader-wrapper">
         <div id="loader"></div>
@@ -163,24 +253,23 @@
             </div>
         </section>
 
-        <!--section class="row" id="tm-section-1">
+        <section class="row" id="tm-section-1">
             <div class="col-lg-12 tm-slider-col">
                 <div class="tm-img-slider">
-                    <div class="tm-img-slider-item" href="img/gallery-img-01.jpg">
-                        <img src="img/gallery-img-01.jpg" alt="Image" class="tm-slider-img">
+                    <div class="tm-img-slider-item" href="img/futurecare.jpg">
+                        <img src="img/futurecare.jpg" alt="Image" class="tm-slider-img">
                     </div>
-                    <div class="tm-img-slider-item" href="img/gallery-img-02.jpg">
-                        <img src="img/gallery-img-02.jpg" alt="Image" class="tm-slider-img">
+                    <div class="tm-img-slider-item" href="img/hello.jpg">
+                        <img src="img/welcome.jpg" alt="Image" class="tm-slider-img">
                     </div>
-                    <div class="tm-img-slider-item" href="img/gallery-img-03.jpg">
-                        <img src="img/gallery-img-03.jpg" alt="Image" class="tm-slider-img">
+                    <div class="tm-img-slider-item" href="img/believe.jpg">
+                        <img src="img/believe.jpg" alt="Image" class="tm-slider-img">
                     </div>
-                    <div class="tm-img-slider-item" href="img/gallery-img-04.jpg">
-                        <img src="img/gallery-img-04.jpg" alt="Image" class="tm-slider-img">
+                    <div class="tm-img-slider-item" href="img/welcome.jpg">
                     </div>
                 </div>
             </div>
-        </section-->
+        </section>
 
         <section class="tm-section-2 tm-section-mb" id="tm-section-2">
             <div class="row">
@@ -399,8 +488,11 @@
                     }
                 });
         });
+	fetch("https://script.google.com/macros/s/AKfycbzet7qFs2YnaJVL1yPdG0Ey-w3GSe7qonzloAy6SdwZ1z7TKzjfYobC_7tRX_WwhE3q/exec").then(res => res.json()).then(data => document.getElementById('testing').textContent = JSON.stringify(data).replace('content',"").replace('Timestamp','').replace('Communication For:','').replace('Important Message','').replace('{"":[["","",""],','').replace(']}',''));
     </script>
-
+<script>
+	
+</script>
 </body>
 
 </html>
