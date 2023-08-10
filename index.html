@@ -31,6 +31,10 @@
 	let onefourteenkey = "114";
 	let onesixteenkey = "116";
 	let timberkey = "timber";
+	let hemkey = "hemlock";
+	let hollykey = "hollyhock";
+	let mulkey = "mulberry";
+	let primkey = "primrose";
 	var pass;
 	document.addEventListener('contextmenu', event => event.preventDefault());
 	document.onkeydown = function(e)
@@ -64,7 +68,7 @@
         }
 	function employee_password() {
 		window.pass = window.prompt("Password:","")
-		if(pass == onetenkey || pass == onetwelvekey || pass == onefourteenkey || pass == onesixteenkey || pass == timberkey){
+		if(pass == onetenkey || pass == onetwelvekey || pass == onefourteenkey || pass == onesixteenkey || pass == timberkey || pass == hemkey || pass == hollykey || pass == mulkey || pass == primkey){
 			document.getElementById("employee-nav").style.display = "block";
 			//insert comms here
 			let temparr = [];
@@ -73,6 +77,10 @@
 			let onefourteenarr = [];
 			let onesixteenarr = [];
 			let timberarr = [];
+			let hemkarr = [];
+			let hollyarr = [];
+			let mularr = [];
+			let primarr = [];
 			var checked = "False";
 			function importantcomms(){
 				if(document.getElementById('testing').textContent.includes("]")){
@@ -100,6 +108,22 @@
 							}
 							else if(thearray[x].includes("timber") && pass == timberkey){
 								timberarr = timberarr.concat(thearray[x]);
+								checked = "True";
+							}
+							else if(thearray[x].includes("hem") && pass == hemkey){
+								hemarr = hemarr.concat(thearray[x]);
+								checked = "True";
+							}
+							else if(thearray[x].includes("holly") && pass == hollykey){
+								hollyarr = hollyarr.concat(thearray[x]);
+								checked = "True";
+							}
+							else if(thearray[x].includes("mul") && pass == mulkey){
+								mularr = mularr.concat(thearray[x]);
+								checked = "True";
+							}
+							else if(thearray[x].includes("prim") && pass == primkey){
+								primarr = primarr.concat(thearray[x]);
 								checked = "True";
 							}
 							x++;
@@ -175,7 +199,7 @@
 
 <body>
 	<p id='testing' style="display: none"></p>
-	<p id='important-comms-house'></p>
+	<p id='important-comms-house' style="padding-left: 2.5%"></p>
     <!-- Loader -->
     <div id="loader-wrapper">
         <div id="loader"></div>
