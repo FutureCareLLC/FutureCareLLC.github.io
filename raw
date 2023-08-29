@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Future Care LLC</title>
+    <!--
+
+    Template 2103 Central
+
+	http://www.tooplate.com/view/2103-central
+
+    -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">
+    <!-- Google web font "Open Sans" -->
+    <link rel="stylesheet" href="font-awesome-4.5.0/css/font-awesome.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <link rel="stylesheet" href="css/tooplate-style.css">
+    <!-- tooplate style -->
+
+    <script>
+		//passkey notes: manager initials + "-" + random digits + mmyy
+		//managers
+        var renderPage = true;
+		let monetenkey = "tg-78445"; //Tracy Gaither
+		let monetwelvekey = "kg-78534-112"; //Kelly Garcia-
+		let monefourteenkey = "es-28012"; //Ed Sharp-
+		let monesixteenkey = "kg-78534-116"; //Kelly Garcia-
+		let mtimberkey = "tb-87380"; //Tonya Bowles-
+		let mhemkey = "kg-70929"; //Kylie Garvey-
+		let mhollykey = "sk-56282"; //Shawn Keenan
+		let mmulkey = "dc-63726"; //Daun Cerny-
+		let mprimkey = "rt-62646"; //Roger Thyng-
+		
+		let onetenkey = "64512";
+		let onetwelvekey = "89276"; 
+		let onefourteenkey = "37819";
+		let onesixteenkey = "99245"; 
+		let timberkey = "87613";
+		let hemkey = "08914"; 
+		let hollykey = "01295";
+		let mulkey = "79833";
+		let primkey = "24218";
+		var pass;
+		document.addEventListener('contextmenu', event => event.preventDefault());
+		document.onkeydown = function(e)
+		{
+			if(event.keyCode == 123)
+			{
+				return false;
+			}
+			if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0))
+			{
+				return false;
+			}
+			if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0))
+			{
+				return false;
+			}
+			if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0))
+			{
+				return false;
+			}
+			if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0))
+			{
+			  return false;
+			}
+		}
+        if (navigator.userAgent.indexOf('MSIE') !== -1
+            || navigator.appVersion.indexOf('Trident/') > 0) {
+            /* Microsoft Internet Explorer detected in. */
+            alert("Please view this in a modern browser such as Chrome or Microsoft Edge.");
+            renderPage = false;
+        }
+	function employee_password() {
+		window.pass = window.prompt("Password:","")
+		//this code acknowledges the manager and gives access to the appropriate house
+		if(pass == monetenkey || pass == monetwelvekey || pass == monefourteenkey || pass == monesixteenkey || pass == mtimberkey || pass == mhemkey || pass == mhollykey || pass == mmulkey || pass == mprimkey){
+			
+		}
+		if(pass == monetenkey || pass == monetwelvekey || pass == monefourteenkey || pass == monesixteenkey || pass == mtimberkey || pass == mhemkey || pass == mhollykey || pass == mmulkey || pass == mprimkey || pass == onetenkey || pass == onetwelvekey || pass == onefourteenkey || pass == onesixteenkey || pass == timberkey || pass == hemkey || pass == hollykey || pass == mulkey || pass == primkey){
+			document.getElementById("employee-nav").style.display = "block";
+			//insert comms here
+			let temparr = [];
+			let onetenarr = [];
+			let onetwelvearr = [];
+			let onefourteenarr = [];
+			let onesixteenarr = [];
+			let timberarr = [];
+			let hemarr = [];
+			let hollyarr = [];
+			let mularr = [];
+			let primarr = [];
+			var checked = "False";
+			function importantcomms(){
+				if(document.getElementById('testing').textContent.includes("]")){
+					thearray = document.getElementById('testing').textContent.split("],[");
+					i = thearray.length
+					x = 0
+					temparr = temparr.concat(thearray[0]);
+					if(checked == "False"){
+						while(x < i){
+							if(pass == onetenkey || pass == monetenkey){
+								if(thearray[x].includes("110")){
+									onetenarr = onetenarr.concat(thearray[x]);
+									checked = "True";
+								}
+							}
+							else if(pass == onetwelvekey || pass == monetwelvekey){
+								if(thearray[x].includes("112")){
+									onetwelvearr = onetwelvearr.concat(thearray[x]);
+									checked = "True";
+								}
+							}
+							else if(pass == onefourteenkey || pass == monefourteenkey){
+								if(thearray[x].includes("114")){
+									onefourteenarr = onefourteenarr.concat(thearray[x]);
+									checked = "True";
+								}
+							}
+							else if(pass == onesixteenkey || pass == monesixteenkey){
+								if(thearray[x].includes("116")){
+									onesixteenarr = onesixteenarr.concat(thearray[x]);
+									checked = "True";
+								}
+							}
+							else if(pass == timberkey || pass == mtimberkey){
+								if(thearray[x].includes("timber")){
+									timberarr = timberarr.concat(thearray[x]);
+									checked = "True";
+								}
+							}
+							else if(pass == hemkey || pass == mhemkey){
+								if(thearray[x].includes("hem")){
+									hemarr = hemarr.concat(thearray[x]);
+									checked = "True";
+								}
+							}
+							else if(pass == hollykey || pass == mhollykey){
+								if(thearray[x].includes("holly")){
+									hollyarr = hollyarr.concat(thearray[x]);
+									checked = "True";
+								}
+							}
+							else if(pass == mulkey || pass == mmulkey){
+								if(thearray[x].includes("mul")){
+									mularr = mularr.concat(thearray[x]);
+									checked = "True";
+								}
+							}
+							else if(pass == primkey || pass == mprimkey){
+								if(thearray[x].includes("prim")){
+									primarr = primarr.concat(thearray[x]);
+									checked = "True";
+								}
+							}
+							x++;
+						}
+						//show comm alerts
+						if (pass == onetenkey || pass == monetenkey){
+							temparr = onetenarr[onetenarr.length - 1].split(',');	
+						}
+						else if (pass == onetwelvekey || pass == monetwelvekey){
+							temparr = onetwelvearr[onetwelvearr.length - 1].split(',');	
+						}
+						else if (pass == onefourteenkey || pass == monefourteenkey){
+							temparr = onefourteenarr[onefourteenarr.length - 1].split(',');	
+						}
+						else if (pass == onesixteenkey || pass == monesixteenkey){
+							temparr = onesixteenarr[onesixteenarr.length - 1].split(',');	
+						}
+						else if (pass == timberkey || pass == mtimberkey){
+							temparr = timberarr[timberarr.length - 1].split(',');	
+						}
+						else if (pass == hemkey || pass == mhemkey){
+							temparr = hemarr[hemarr.length - 1].split(',');	
+						}
+						else if (pass == hollykey || pass == mhollykey){
+							temparr = hollyarr[hollyarr.length - 1].split(',');	
+						}
+						else if (pass == mulkey || pass == mmulkey){
+							temparr = mularr[mularr.length - 1].split(',');	
+						}
+						else if (pass == primkey || pass == mprimkey){
+							temparr = primarr[primarr.length - 1].split(',');	
+						}
+						//house
+						if(temparr[2].replace('"','').replace('"','').replace("[","").replace("[","").replace("]","").replace("]","") != "" && temparr[2].replace('"','').replace('"','').replace("[","").replace("[","").replace("]","").replace("]","") != "na"){
+							tempstr = "Important House Communication: " + temparr[2].replace('"','').replace('"','').replace("[","").replace("[","").replace("]","").replace("]","");
+							document.getElementById('important-comms-house').textContent = tempstr;
+						}
+					}
+				}
+			};
+			setInterval(importantcomms, 3000);
+		}
+		else{
+			window.alert("Incorrect Password!");
+		}
+	}
+	function frms(frms){
+		if(frms == 'timeclock'){
+			window.open("https://docs.google.com/forms/d/e/1FAIpQLSfT43EQMQche4iS0Lv3k0N7uqymf8Bu5lunH2TNQ8RwMaHpsA/viewform?usp=sf_link")
+		}
+		else if(frms == "qa"){
+			window.open("https://docs.google.com/forms/d/e/1FAIpQLSdoUEnqF03PugHPon_tKzcNh23aJ5xEyrhHTB_Pv_qOv4JPyA/viewform");
+		}
+		else if(frms == 'behaviors'){
+			//TODO
+			window.open("")
+			alert('behaviors clicked')
+		}
+		else if(frms == 'communications'){
+			if(pass == onetenkey || pass == monetenkey){	
+				if(pass == onetenkey){
+					let option = window.prompt("1) Submit new communication. 2) View communications.","")
+					if(option == "1"){
+						window.open("https://docs.google.com/forms/d/e/1FAIpQLSfgwCIhvNudSK51NhK01PeMyK8AeeT0sGGQD_qIzcun-uyL3w/viewform?usp=sf_link");
+					}
+					else if(option == "2"){
+						window.open("https://docs.google.com/spreadsheets/d/1BgsbeKTfj2c3acuQi4A3SCe3ZyG-UPZXwfFbT1CXZmw/edit?usp=sharing");
+					}
+					else {
+						alert('Invalid Input');
+					}
+				}
+				else if(pass == monetenkey){
+					let option = window.prompt("1) Submit new communication. 2) View communications. 3) Submit Important Communication","")
+					if(option == "1"){
+						window.open("https://docs.google.com/forms/d/e/1FAIpQLSfgwCIhvNudSK51NhK01PeMyK8AeeT0sGGQD_qIzcun-uyL3w/viewform?usp=sf_link");
+					}
+					else if(option == "2"){
+						window.open("https://docs.google.com/spreadsheets/d/1BgsbeKTfj2c3acuQi4A3SCe3ZyG-UPZXwfFbT1CXZmw/edit?usp=sharing");
+					}
+					else if(option == "3" && pass == monetenkey){
+						window.open("https://docs.google.com/forms/d/e/1FAIpQLSd9yqqNefQPKL3SEe5BSoqfpqOX8o7cA_0DLdPs_BYCX37tvw/viewform");
+					}
+					else {
+						alert('Invalid Input');
+					}
+				}
+			}
+			else if(pass == onetwelvekey || pass == monetwelvekey){	
+				if (pass == onetwelvekey){
+					let option = window.prompt("1) Submit new communication. 2) View communications.","")
+					if(option == "1"){
+						window.open("https://docs.google.com/forms/d/1sToWpWyRyz5_myLaFpjSfMZefGBEeMMREPDsaMsSjd0/edit");
+					}
+					else if(option == "2"){
+						window.open("https://docs.google.com/spreadsheets/d/1CTmkKVePA7LsoNliGGvC8NTYm164OmYaPRPTFLXJefw/edit?resourcekey#gid=88238199");
+					}
+					else {
+						alert('Invalid Input');
+					}
+				}
+				else if (pass == monetwelvekey){
+					let option = window.prompt("1) Submit new communication. 2) View communications. 3) Submit Important Communication","")
+					if(option == "1"){
+						window.open("https://docs.google.com/forms/d/1sToWpWyRyz5_myLaFpjSfMZefGBEeMMREPDsaMsSjd0/edit");
+					}
+					else if(option == "2"){
+						window.open("https://docs.google.com/spreadsheets/d/1CTmkKVePA7LsoNliGGvC8NTYm164OmYaPRPTFLXJefw/edit?resourcekey#gid=88238199");
+					}
+					else if(option == "3"){
+						window.open("https://docs.google.com/forms/d/e/1FAIpQLSd9yqqNefQPKL3SEe5BSoqfpqOX8o7cA_0DLdPs_BYCX37tvw/viewform");
+					}
+					else {
+						alert('Invalid Input');
+					}
+				}
+			}
+			else if(pass == onefourteenkey || pass == monefourteenkey){	
+				if(pass == onefourteenkey){
+					let option = window.prompt("1) Submit new communication. 2) View communications.","")
+					if(option == "1"){
+						window.open("https://docs.google.com/forms/d/1U3rWYcoLv84D0hQDjIwdMW-UYvbRyAAFeRvDb9xrhzQ/edit");
+					}
+					else if(option == "2"){
+						window.open("https://docs.google.com/spreadsheets/d/1UKWXaI0Rsz7-uY2eNvErJa8e5hKRN2Z0dOTeIixF_0E/edit?resourcekey#gid=1010212790");
+					}
+					else {
+						alert('Invalid Input');
+					}
+				}
+				else if(pass == monefourteenkey){
+					let option = window.prompt("1) Submit new communication. 2) View communications. 3) Submit Important Communication","")
+					if(option == "1"){
+						window.open("https://docs.google.com/forms/d/1U3rWYcoLv84D0hQDjIwdMW-UYvbRyAAFeRvDb9xrhzQ/edit");
+					}
+					else if(option == "2"){
+						window.open("https://docs.google.com/spreadsheets/d/1UKWXaI0Rsz7-uY2eNvErJa8e5hKRN2Z0dOTeIixF_0E/edit?resourcekey#gid=1010212790");
+					}
+					else if(option == "3"){
+						window.open("https://docs.google.com/forms/d/e/1FAIpQLSd9yqqNefQPKL3SEe5BSoqfpqOX8o7cA_0DLdPs_BYCX37tvw/viewform");
+					}
+					else {
+						alert('Invalid Input');
+					}
+				}
+			}
+			else if(pass == onesixteenkey || pass == monesixteenkey){	
+				if(pass == onesixteenkey){
+					let option = window.prompt("1) Submit new communication. 2) View communications.","")
+					if(option == "1"){
+						window.open("https://docs.google.com/forms/d/123fgyVY5DUC2T-xX9kkQYHdExC6g7VAm7o77ddsd1cc/edit");
+					}
+					else if(option == "2"){
+						window.open("https://docs.google.com/spreadsheets/d/1gQeL9ts9o4GEoGuKIu5gSEkoZdgimF-gFUCZulQjkqU/edit?resourcekey#gid=1624329812");
+					}
+					else {
+						alert('Invalid Input');
+					}
+				}
+				else if(pass == monesixteenkey){
+					let option = window.prompt("1) Submit new communication. 2) View communications. 3) Submit Important Communication","")
+					if(option == "1"){
+						window.open("https://docs.google.com/forms/d/123fgyVY5DUC2T-xX9kkQYHdExC6g7VAm7o77ddsd1cc/edit");
+					}
+					else if(option == "2"){
+						window.open("https://docs.google.com/spreadsheets/d/1gQeL9ts9o4GEoGuKIu5gSEkoZdgimF-gFUCZulQjkqU/edit?resourcekey#gid=1624329812");
+					}
+					else if(option == "3"){
+						window.open("https://docs.google.com/forms/d/e/1FAIpQLSd9yqqNefQPKL3SEe5BSoqfpqOX8o7cA_0DLdPs_BYCX37tvw/viewform");
+					}
+					else {
+						alert('Invalid Input');
+					}
+				}
+			}
+			else if(pass == timberkey || pass == mtimberkey){	
+				if(pass == timberkey){
+					let option = window.prompt("1) Submit new communication. 2) View communications.","")
+					if(option == "1"){
+						window.open("https://docs.google.com/forms/d/19IoW3zRFInirxx9vuKHEwGdMoWCXLHClJAuPm79S_Po/edit");
+					}
+					else if(option == "2"){
+						window.open("https://docs.google.com/spreadsheets/d/1mw6PTV38fZrbiLLT1T9hvoj-NqCswcaVJ7KDsbr_1Lw/edit?resourcekey#gid=618975353");
+					}
+					else {
+						alert('Invalid Input');
+					}
+				}
+				else if(pass == mtimberkey){
+					let option = window.prompt("1) Submit new communication. 2) View communications. 3) Submit Important Communication","")
+					if(option == "1"){
+						window.open("https://docs.google.com/forms/d/19IoW3zRFInirxx9vuKHEwGdMoWCXLHClJAuPm79S_Po/edit");
+					}
+					else if(option == "2"){
+						window.open("https://docs.google.com/spreadsheets/d/1mw6PTV38fZrbiLLT1T9hvoj-NqCswcaVJ7KDsbr_1Lw/edit?resourcekey#gid=618975353");
+					}
+					else if(option == "3"){
+						window.open("https://docs.google.com/forms/d/e/1FAIpQLSd9yqqNefQPKL3SEe5BSoqfpqOX8o7cA_0DLdPs_BYCX37tvw/viewform");
+					}
+					else {
+						alert('Invalid Input');
+					}
+				}
+			}
+			else if(pass == hemkey || pass == mhemkey){	
+				if(pass == hemkey){
+					let option = window.prompt("1) Submit new communication. 2) View communications.","")
+					if(option == "1"){
+						window.open("https://docs.google.com/forms/d/1w_fpJONKT5jqa_uwyH5F2R10LqHFsumCgrfTk43Z9l4/edit");
+					}
+					else if(option == "2"){
+						window.open("https://docs.google.com/spreadsheets/d/1_dh5GtsEm_z5sg4RJCSAp-MclHGtii1n0b3R5fCM3a0/edit?resourcekey#gid=827042750");
+					}
+					else {
+						alert('Invalid Input');
+					}
+				}
+				else if(pass == mhemkey){
+					let option = window.prompt("1) Submit new communication. 2) View communications. 3) Submit Important Communication","")
+					if(option == "1"){
+						window.open("https://docs.google.com/forms/d/1w_fpJONKT5jqa_uwyH5F2R10LqHFsumCgrfTk43Z9l4/edit");
+					}
+					else if(option == "2"){
+						window.open("https://docs.google.com/spreadsheets/d/1_dh5GtsEm_z5sg4RJCSAp-MclHGtii1n0b3R5fCM3a0/edit?resourcekey#gid=827042750");
+					}
+					else if(option == "3"){
+						window.open("https://docs.google.com/forms/d/e/1FAIpQLSd9yqqNefQPKL3SEe5BSoqfpqOX8o7cA_0DLdPs_BYCX37tvw/viewform");
+					}
+					else {
+						alert('Invalid Input');
+					}
+				}
+			}
+			else if(pass == hollykey || pass == mhollykey){	
+				if(pass == hollykey){
+					let option = window.prompt("1) Submit new communication. 2) View communications.","")
+					if(option == "1"){
+						window.open("https://docs.google.com/forms/d/18VMldUZ33w_rGaYoVLBCPWmXPgda0ncIy5PozNL90KQ/edit");
+					}
+					else if(option == "2"){
+						window.open("https://docs.google.com/spreadsheets/d/1PX-dtzj67vj7MVaOUDBtMuyGyLboNwU4xYfqf5BdwPI/edit?resourcekey#gid=904690958");
+					}
+					else {
+						alert('Invalid Input');
+					}
+				}
+				else if(pass == mhollykey){
+					let option = window.prompt("1) Submit new communication. 2) View communications. 3) Submit Important Communication","")
+					if(option == "1"){
+						window.open("https://docs.google.com/forms/d/18VMldUZ33w_rGaYoVLBCPWmXPgda0ncIy5PozNL90KQ/edit");
+					}
+					else if(option == "2"){
+						window.open("https://docs.google.com/spreadsheets/d/1PX-dtzj67vj7MVaOUDBtMuyGyLboNwU4xYfqf5BdwPI/edit?resourcekey#gid=904690958");
+					}
+					else if(option == "3"){
+						window.open("https://docs.google.com/forms/d/e/1FAIpQLSd9yqqNefQPKL3SEe5BSoqfpqOX8o7cA_0DLdPs_BYCX37tvw/viewform");
+					}
+					else {
+						alert('Invalid Input');
+					}
+				}
+			}
+			else if(pass == mulkey || pass == mmulkey){	
+				if(pass == mulkey){
+					let option = window.prompt("1) Submit new communication. 2) View communications.","")
+					if(option == "1"){
+						window.open("https://docs.google.com/forms/d/1WVAFHnUc8U0K1w35LelVpEKgUvSY-khmz3ixCcwmxcI/edit#responses");
+					}
+					else if(option == "2"){
+						window.open("https://docs.google.com/spreadsheets/d/13NJCjgo8kGMZJaPMnMKNjduPXggjQin_BWW8kiaPa3E/edit?resourcekey#gid=1408610920");
+					}
+					else {
+						alert('Invalid Input');
+					}
+				}
+				else if(pass == mmulkey){
+					let option = window.prompt("1) Submit new communication. 2) View communications. 3) Submit Important Communication","")
+					if(option == "1"){
+						window.open("https://docs.google.com/forms/d/1WVAFHnUc8U0K1w35LelVpEKgUvSY-khmz3ixCcwmxcI/edit#responses");
+					}
+					else if(option == "2"){
+						window.open("https://docs.google.com/spreadsheets/d/13NJCjgo8kGMZJaPMnMKNjduPXggjQin_BWW8kiaPa3E/edit?resourcekey#gid=1408610920");
+					}
+					else if(option == "3"){
+						window.open("https://docs.google.com/forms/d/e/1FAIpQLSd9yqqNefQPKL3SEe5BSoqfpqOX8o7cA_0DLdPs_BYCX37tvw/viewform");
+					}
+					else {
+						alert('Invalid Input');
+					}
+				}
+			}
+			else if(pass == primkey || pass == mprimkey){	
+				if(pass == primkey){
+				let option = window.prompt("1) Submit new communication. 2) View communications.","")
+					if(option == "1"){
+						window.open("https://docs.google.com/forms/d/1dg_COdmb-Ac7xu7ZXh457adReIaFoSdfkrJJhilY6sI/edit");
+					}
+					else if(option == "2"){
+						window.open("https://docs.google.com/spreadsheets/d/1T-ECKEziiHZWDBggVjs-Qcvzw1ODCXDvS9gBxtRc7zU/edit?resourcekey#gid=496797329");
+					}
+					else {
+						alert('Invalid Input');
+					}
+				}
+				else if(pass == mprimkey){
+					let option = window.prompt("1) Submit new communication. 2) View communications. 3) Submit Important Communication","")
+					if(option == "1"){
+						window.open("https://docs.google.com/forms/d/1dg_COdmb-Ac7xu7ZXh457adReIaFoSdfkrJJhilY6sI/edit");
+					}
+					else if(option == "2"){
+						window.open("https://docs.google.com/spreadsheets/d/1T-ECKEziiHZWDBggVjs-Qcvzw1ODCXDvS9gBxtRc7zU/edit?resourcekey#gid=496797329");
+					}
+					else if(option == "3"){
+						window.open("https://docs.google.com/forms/d/e/1FAIpQLSd9yqqNefQPKL3SEe5BSoqfpqOX8o7cA_0DLdPs_BYCX37tvw/viewform");
+					}
+					else {
+						alert('Invalid Input');
+					}
+				}
+			}
+		}
+		else if(frms == 'daily'){
+			if(pass == onetenkey){
+				let option = window.prompt("1) Submit new communication. 2) View communications","")
+				if(option == "1"){
+					window.open("https://docs.google.com/forms/d/e/1FAIpQLSfgwCIhvNudSK51NhK01PeMyK8AeeT0sGGQD_qIzcun-uyL3w/viewform?usp=sf_link");
+				}
+				else if(option == "2"){
+					window.open("https://docs.google.com/spreadsheets/d/1BgsbeKTfj2c3acuQi4A3SCe3ZyG-UPZXwfFbT1CXZmw/edit?usp=sharing");
+				}
+			}
+		}
+		else if(frms == 'pdf'){
+			window.open("https://docs.google.com/forms/d/e/1FAIpQLSctu28igUup9L89-yCPJUHujw0kv77TMuI10Fff9LZQvbPZxA/viewform?usp=sf_link")
+		}
+		else if(frms == 'policies'){
+			window.open("https://docs.google.com/document/d/1PB2mUZGqUUPPxRa4yelt-pAe60BOMxQtf2R53Vf-E88/edit?usp=sharing")
+		}
+	}
+    </script>
+
+</head>
+
+<body>
+	<p id='testing' style="display: none"></p>
+	<p id='important-comms-house' style="padding-left: 2.5%"></p>
+    <!-- Loader -->
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
+    <div class="container">
+        <section class="tm-section-head" id="top">
+            <header id="header" class="text-center tm-text-gray">
+                <h1>Future Care LLC</h1>
+                <p>Where We Care About Your Future</p>
+            </header>
+
+            <nav class="navbar narbar-light">
+                <a class="navbar-brand tm-text-gray" href="#">
+                    Menu
+                </a>
+                <button type="button" id="nav-toggle" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#mainNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">
+                        <i class="fa fa-navicon tm-fa-toggler-icon"></i>
+                    </span>
+                </button>
+                <div id="mainNav" class="collapse navbar-collapse tm-bg-white">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link tm-text-gray" href="#top">Home
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link tm-text-gray" href="#tm-section-2">Info</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link tm-text-gray" href="#tm-section-6">Contact</a>
+                        </li>
+			<li class="nav-item">
+				<a class="nav-link tm-text-gray" href="#tm-section-6" onclick="employee_password()">Employee Resources</a>
+			</li>
+                    </ul>
+                </div>
+            </nav>
+	<p id="employee-nav" style="display: none">
+			<a style="padding-right: 5%" class="tm-text-gray" onclick="frms('timeclock')">Time Clock</a>
+			<a style="padding-right: 5%" class="tm-text-gray" onclick="frms('communications')">Communications</a>
+			<!--<a style="padding-right: 5%" class="tm-text-gray" onclick="frms('behaviors')">Behaviors</a>-->
+			<a style="padding-right: 5%" class="tm-text-gray" onclick="frms('pdf')">PDF Reports</a>
+			<a style="padding-right: 5%" class="tm-text-gray" onclick="frms('policies')">Policies & Procedures</a>
+			<a style="padding-right: 5%" class="tm-text-gray" href="August 2023 Newsletter.pdf">Newsletter</a>
+			<a style="padding-right: 5%" class="tm-text-gray" onclick="frms('qa')">Q&A</a>
+	</p>
+
+            <div class="navbar navbar-default navbar-fixed-top">
+                <a href="/index.html" class="navbar-brand"></a>
+                <botton class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mydropdown">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </botton>
+
+            </div>
+
+            <div class="collapse navbar-collapse" id="mydropdown">
+
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">info</a>
+                    </li>
+                    <li>
+                        <a href="#">contact</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="row" id="tm-section-1">
+            <div class="col-lg-12 tm-slider-col">
+                <div class="tm-img-slider">
+                    <div class="tm-img-slider-item" href="img/futurecare.JPG">
+                        <img src="img/futurecare.JPG" alt="Image" class="tm-slider-img">
+                    </div>
+                    <div class="tm-img-slider-item" href="img/welcome.JPG">
+                        <img src="img/welcome.JPG" alt="Image" class="tm-slider-img">
+                    </div>
+                    <div class="tm-img-slider-item" href="img/believe.JPG">
+                        <img src="img/believe.JPG" alt="Image" class="tm-slider-img">
+                    </div>
+                    <div class="tm-img-slider-item" href="img/hello.JPG">
+                        <img src="img/hello.JPG" alt="Image" class="tm-slider-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="tm-section-2 tm-section-mb" id="tm-section-2">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-lg-0 mb-md-5 mb-5 pr-md-5">
+                    <header class="text-center">
+                    </header>
+                    <h2>Meet the Team</h2>
+					<p>Future Care knows the importance of a strong team, and a strong family. Meet our trusted individuals here for you.</p>
+                    <a href="#tm-section-3" class="btn tm-btn-pad-2 float-right">Learn More</a>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-lg-0 mb-md-5 mb-5 pr-md-5">
+                    <header class="text-center">
+                    </header>
+                    <h2><a href="https://docs.google.com/forms/d/e/1FAIpQLSe5inHCWmb-8dfjpTZLVVKZBttpK3H3DkhB8QcrHa-xUbxXkg/viewform?usp=sf_link">Join Today</a></h2>
+                    <p> Future Care knows the value of community, where together, we can do so much. Join us today where every person makes a difference.
+                    </p>
+
+                    <!--a href="#tm-section-4" class="btn tm-btn-pad-2 float-right">Learn More</a-->
+                </div>
+
+                <div class="col-xl-4 col-lg-4 col-md-12">
+                    <h2>Contact Us</h2>
+					<p>604 Black Street, Rolla, MO - 65401<br>(573) 578-2303</p>
+                </div>
+            </div>
+        </section>
+
+        <!--section class="tm-section-3 tm-section-mb" id="tm-section-3">
+            <div class="col-lg-12 tm-slider-col">
+                <div class="tm-img-slider">
+                    <div class="tm-img-slider-item" href="img/gallery-img-01.jpg">
+                        <img src="img/gallery-img-01.jpg" alt="Image" class="tm-slider-img">
+                    </div>
+                    <div class="tm-img-slider-item" href="img/gallery-img-02.jpg">
+                        <img src="img/gallery-img-02.jpg" alt="Image" class="tm-slider-img">
+                    </div>
+                    <div class="tm-img-slider-item" href="img/gallery-img-03.jpg">
+                        <img src="img/gallery-img-03.jpg" alt="Image" class="tm-slider-img">
+                    </div>
+                    <div class="tm-img-slider-item" href="img/gallery-img-04.jpg">
+                        <img src="img/gallery-img-04.jpg" alt="Image" class="tm-slider-img">
+                    </div>
+                </div>
+            </div>
+        </section-->
+<!--
+        <section class="tm-section-4 tm-section-mb" id="tm-section-4">
+            <div class="row">
+
+            </div>
+        </section>
+
+        <section class="tm-section-5" id="tm-section-5">
+            <div class="row">
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="image fit">
+                        <img src="img/tm-sc4-img-1.jpg" class="img-fluid">
+                    </div>
+                </div>
+
+                <div class="col-lg-8 col-md-12 col-sm-12 pl-lg-0">
+                    <div class="media tm-media">
+                        <img src="img/sc4-img-2.jpg" class="img-responsive tm-media-img">
+                        <div class="media-body tm-box-5">
+                            <h2>Etiam tincidunt ullamcorper</h2>
+                            <p class="mb-0">Maecenas tempor nibh sed rhoncus ullamcorper. Ut porttitor ante non accumsan pretium. Maecenas iaculis arcu sed porta accumsan.</p>
+                        </div>
+                    </div>
+                    <div class="media tm-media">
+                        <img src="img/sc4-img-3.jpg" class="img-responsive tm-media-img">
+                        <div class="media-body tm-box-5">
+                            <h2>Sed et finibus tortor</h2>
+                            <p class="mb-0">Suspendisse iaculis leo libero, ut congue augue feugiat eu. Nulla faucibus non odio sed auctor. Vestibulum a tincidunt dolor, eget eleifend lacus.</p>
+                        </div>
+                    </div>
+                    <div class="media tm-media">
+                        <img src="img/sc4-img-4.jpg" class="img-responsive tm-media-img">
+                        <div class="media-body tm-box-5">
+                            <h2>Vestibulum sit amet</h2>
+                            <p class="mb-0"> Cras aliquet urna ut sapien tincidunt, quis malesuada elit facilisis. Vestibulum sit amet tortor velit. Nam elementum nibh a libero pharetra elementum. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="tm-section-6" id="tm-section-6">
+            <div class="row">
+                <div class="col-lg-7 col-md-7 col-xs-12">
+                    <div class="contact_message">
+                        <form action="" method="post" class="contact-form">
+                            <div class="row mb-2">
+                                <div class="form-group col-xl-6">
+                                    <input type="text" id="contact_name" name="contact_name" class="form-control" placeholder="Name" required/>
+                                </div>
+                                <div class="form-group col-xl-6 pl-xl-1">
+                                    <input type="email" id="contact_email" name="contact_email" class="form-control" placeholder="Email" required/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="contact_message" name="contact_message" class="form-control" rows="6" placeholder="Message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn  tm-btn-submit float-right btn-big">Send It Now</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 col-md-5 col-xs-12 tm-contact-right">
+                    <div class="tm-address-box">
+                        <h2 class="mb-4">Contact Us</h2>
+			<p class="mb-5">A business led by your local community, commited to the present and future care of your loved ones.</p>
+                        <address>
+                            604 Black Street, Rolla, MO - 65401
+                            <br> (573) 578-2303
+                        </address>
+                    </div>
+                </div>
+            </div>
+        </section>
+-->
+        <footer class="mt-5">
+            <p class="text-center">Copyright © 2023 Future Care LLC</p>
+        </footer>
+    </div>
+
+    <!-- load JS files -->
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <!-- https://popper.js.org/ -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- https://getbootstrap.com/ -->
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <!-- Slick Carousel -->
+
+    <script>
+        function setCarousel() {
+            var slider = $('.tm-img-slider');
+
+            if (slider.hasClass('slick-initialized')) {
+                slider.slick('destroy');
+            }
+
+            if ($(window).width() > 991) {
+                // Slick carousel
+                slider.slick({
+                    autoplay: true,
+                    fade: true,
+                    speed: 800,
+                    infinite: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                });
+            } else {
+                slider.slick({
+                    autoplay: true,
+                    fade: true,
+                    speed: 800,
+                    infinite: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                });
+            }
+        }
+
+        $(document).ready(function () {
+            if (renderPage) {
+                $('body').addClass('loaded');
+            }
+
+            setCarousel();
+
+            $(window).resize(function () {
+                setCarousel();
+            });
+
+            // Close menu after link click
+            $('.nav-link').click(function () {
+                $('#mainNav').removeClass('show');
+            });
+
+            // https://css-tricks.com/snippets/jquery/smooth-scrolling/
+            // Select all links with hashes
+            $('a[href*="#"]')
+                // Remove links that don't actually link to anything
+                .not('[href="#"]')
+                .not('[href="#0"]')
+                .click(function (event) {
+                    // On-page links
+                    if (
+                        location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+                        &&
+                        location.hostname == this.hostname
+                    ) {
+                        // Figure out element to scroll to
+                        var target = $(this.hash);
+                        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                        // Does a scroll target exist?
+                        if (target.length) {
+                            // Only prevent default if animation is actually gonna happen
+                            event.preventDefault();
+                            $('html, body').animate({
+                                scrollTop: target.offset().top + 1
+                            }, 1000, function () {
+                                // Callback after animation
+                                // Must change focus!
+                                var $target = $(target);
+                                $target.focus();
+                                if ($target.is(":focus")) { // Checking if the target was focused
+                                    return false;
+                                } else {
+                                    $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+                                    $target.focus(); // Set focus again
+                                };
+                            });
+                        }
+                    }
+                });
+        });
+	fetch("https://script.google.com/macros/s/AKfycbzet7qFs2YnaJVL1yPdG0Ey-w3GSe7qonzloAy6SdwZ1z7TKzjfYobC_7tRX_WwhE3q/exec").then(res => res.json()).then(data => document.getElementById('testing').textContent = JSON.stringify(data).replace('content',"").replace('Timestamp','').replace('Communication For:','').replace('Important Message','').replace('{"":[["","",""],','').replace(']}',''));
+    </script>
+<script>
+	
+</script>
+</body>
+
+</html>
