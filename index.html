@@ -26,40 +26,40 @@
 
     <script>
         var renderPage = true;
-	let onetenkey = "110";
-	let onetwelvekey = "112";
-	let onefourteenkey = "114";
-	let onesixteenkey = "116";
-	let timberkey = "timber";
-	let hemkey = "hemlock";
-	let hollykey = "hollyhock";
-	let mulkey = "mulberry";
-	let primkey = "primrose";
-	var pass;
-	document.addEventListener('contextmenu', event => event.preventDefault());
-	document.onkeydown = function(e)
-    {
-        if(event.keyCode == 123)
-        {
-            return false;
-        }
-        if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0))
-        {
-            return false;
-        }
-        if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0))
-        {
-            return false;
-        }
-        if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0))
-        {
-            return false;
-        }
-    if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0))
-    {
-      return false;
-    }
-    }
+		let onetenkey = "110";
+		let onetwelvekey = "112";
+		let onefourteenkey = "114";
+		let onesixteenkey = "116";
+		let timberkey = "timber";
+		let hemkey = "hemlock";
+		let hollykey = "hollyhock";
+		let mulkey = "mulberry";
+		let primkey = "primrose";
+		var pass;
+		document.addEventListener('contextmenu', event => event.preventDefault());
+		document.onkeydown = function(e)
+		{
+			if(event.keyCode == 123)
+			{
+				return false;
+			}
+			if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0))
+			{
+				return false;
+			}
+			if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0))
+			{
+				return false;
+			}
+			if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0))
+			{
+				return false;
+			}
+			if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0))
+			{
+			  return false;
+			}
+		}
         if (navigator.userAgent.indexOf('MSIE') !== -1
             || navigator.appVersion.indexOf('Trident/') > 0) {
             /* Microsoft Internet Explorer detected in. */
@@ -77,17 +77,18 @@
 			let onefourteenarr = [];
 			let onesixteenarr = [];
 			let timberarr = [];
-			let hemkarr = [];
+			let hemarr = [];
 			let hollyarr = [];
 			let mularr = [];
 			let primarr = [];
 			var checked = "False";
+			var manager = "False";
 			function importantcomms(){
 				if(document.getElementById('testing').textContent.includes("]")){
 					thearray = document.getElementById('testing').textContent.split("],[");
 					i = thearray.length
 					x = 0
-						temparr = temparr.concat(thearray[0]);
+					temparr = temparr.concat(thearray[0]);
 					if(checked == "False"){
 						while(x < i){
 							if(thearray[x].includes("110") && pass == onetenkey){
@@ -144,8 +145,23 @@
 						else if (pass == timberkey){
 							temparr = timberarr[timberarr.length - 1].split(',');	
 						}
-						tempstr = "Important House Communication: " + temparr[2].replace('"','').replace('"','').replace("[","").replace("[","").replace("]","").replace("]","");
-						document.getElementById('important-comms-house').textContent = tempstr;
+						else if (pass == hemkey){
+							temparr = hemarr[hemarr.length - 1].split(',');	
+						}
+						else if (pass == hollykey){
+							temparr = hollyarr[hollyarr.length - 1].split(',');	
+						}
+						else if (pass == mulkey){
+							temparr = mularr[mularr.length - 1].split(',');	
+						}
+						else if (pass == primkey){
+							temparr = primarr[primarr.length - 1].split(',');	
+						}
+						//house
+						if(temparr[2].replace('"','').replace('"','').replace("[","").replace("[","").replace("]","").replace("]","") != "" && temparr[2].replace('"','').replace('"','').replace("[","").replace("[","").replace("]","").replace("]","") != "na"){
+							tempstr = "Important House Communication: " + temparr[2].replace('"','').replace('"','').replace("[","").replace("[","").replace("]","").replace("]","");
+							document.getElementById('important-comms-house').textContent = tempstr;
+						}
 					}
 				}
 			};
@@ -159,6 +175,9 @@
 		if(frms == 'timeclock'){
 			window.open("https://docs.google.com/forms/d/e/1FAIpQLSfT43EQMQche4iS0Lv3k0N7uqymf8Bu5lunH2TNQ8RwMaHpsA/viewform?usp=sf_link")
 		}
+		else if(frms == "qa"){
+			window.open("https://docs.google.com/forms/d/e/1FAIpQLSdoUEnqF03PugHPon_tKzcNh23aJ5xEyrhHTB_Pv_qOv4JPyA/viewform");
+		}
 		else if(frms == 'behaviors'){
 			//TODO
 			window.open("")
@@ -166,12 +185,138 @@
 		}
 		else if(frms == 'communications'){
 			if(pass == onetenkey){	
-				let option = window.prompt("1) Submit new communication. 2) View communications","")
+				let option = window.prompt("1) Submit new communication. 2) View communications. 3) Submit Important Communication","")
 				if(option == "1"){
 					window.open("https://docs.google.com/forms/d/e/1FAIpQLSfgwCIhvNudSK51NhK01PeMyK8AeeT0sGGQD_qIzcun-uyL3w/viewform?usp=sf_link");
 				}
 				else if(option == "2"){
 					window.open("https://docs.google.com/spreadsheets/d/1BgsbeKTfj2c3acuQi4A3SCe3ZyG-UPZXwfFbT1CXZmw/edit?usp=sharing");
+				}
+				else if(option == "3"){
+					window.open("https://docs.google.com/forms/d/e/1FAIpQLSd9yqqNefQPKL3SEe5BSoqfpqOX8o7cA_0DLdPs_BYCX37tvw/viewform");
+				}
+				else {
+					alert('Invalid Input');
+				}
+			}
+			else if(pass == onetwelvekey){	
+				let option = window.prompt("1) Submit new communication. 2) View communications. 3) Submit Important Communication","")
+				if(option == "1"){
+					window.open("https://docs.google.com/forms/d/1sToWpWyRyz5_myLaFpjSfMZefGBEeMMREPDsaMsSjd0/edit");
+				}
+				else if(option == "2"){
+					window.open("https://docs.google.com/spreadsheets/d/1CTmkKVePA7LsoNliGGvC8NTYm164OmYaPRPTFLXJefw/edit?resourcekey#gid=88238199");
+				}
+				else if(option == "3"){
+					window.open("https://docs.google.com/forms/d/e/1FAIpQLSd9yqqNefQPKL3SEe5BSoqfpqOX8o7cA_0DLdPs_BYCX37tvw/viewform");
+				}
+				else {
+					alert('Invalid Input');
+				}
+			}
+			else if(pass == onefourteenkey){	
+				let option = window.prompt("1) Submit new communication. 2) View communications. 3) Submit Important Communication","")
+				if(option == "1"){
+					window.open("https://docs.google.com/forms/d/1U3rWYcoLv84D0hQDjIwdMW-UYvbRyAAFeRvDb9xrhzQ/edit");
+				}
+				else if(option == "2"){
+					window.open("https://docs.google.com/spreadsheets/d/1UKWXaI0Rsz7-uY2eNvErJa8e5hKRN2Z0dOTeIixF_0E/edit?resourcekey#gid=1010212790");
+				}
+				else if(option == "3"){
+					window.open("https://docs.google.com/forms/d/e/1FAIpQLSd9yqqNefQPKL3SEe5BSoqfpqOX8o7cA_0DLdPs_BYCX37tvw/viewform");
+				}
+				else {
+					alert('Invalid Input');
+				}
+			}
+			else if(pass == onesixteenkey){	
+				let option = window.prompt("1) Submit new communication. 2) View communications. 3) Submit Important Communication","")
+				if(option == "1"){
+					window.open("https://docs.google.com/forms/d/123fgyVY5DUC2T-xX9kkQYHdExC6g7VAm7o77ddsd1cc/edit");
+				}
+				else if(option == "2"){
+					window.open("https://docs.google.com/spreadsheets/d/1gQeL9ts9o4GEoGuKIu5gSEkoZdgimF-gFUCZulQjkqU/edit?resourcekey#gid=1624329812");
+				}
+				else if(option == "3"){
+					window.open("https://docs.google.com/forms/d/e/1FAIpQLSd9yqqNefQPKL3SEe5BSoqfpqOX8o7cA_0DLdPs_BYCX37tvw/viewform");
+				}
+				else {
+					alert('Invalid Input');
+				}
+			}
+			else if(pass == timberkey){	
+				let option = window.prompt("1) Submit new communication. 2) View communications. 3) Submit Important Communication","")
+				if(option == "1"){
+					window.open("https://docs.google.com/forms/d/19IoW3zRFInirxx9vuKHEwGdMoWCXLHClJAuPm79S_Po/edit");
+				}
+				else if(option == "2"){
+					window.open("https://docs.google.com/spreadsheets/d/1mw6PTV38fZrbiLLT1T9hvoj-NqCswcaVJ7KDsbr_1Lw/edit?resourcekey#gid=618975353");
+				}
+				else if(option == "3"){
+					window.open("https://docs.google.com/forms/d/e/1FAIpQLSd9yqqNefQPKL3SEe5BSoqfpqOX8o7cA_0DLdPs_BYCX37tvw/viewform");
+				}
+				else {
+					alert('Invalid Input');
+				}
+			}
+			else if(pass == hemhey){	
+				let option = window.prompt("1) Submit new communication. 2) View communications. 3) Submit Important Communication","")
+				if(option == "1"){
+					window.open("https://docs.google.com/forms/d/1w_fpJONKT5jqa_uwyH5F2R10LqHFsumCgrfTk43Z9l4/edit");
+				}
+				else if(option == "2"){
+					window.open("https://docs.google.com/spreadsheets/d/1_dh5GtsEm_z5sg4RJCSAp-MclHGtii1n0b3R5fCM3a0/edit?resourcekey#gid=827042750");
+				}
+				else if(option == "3"){
+					window.open("https://docs.google.com/forms/d/e/1FAIpQLSd9yqqNefQPKL3SEe5BSoqfpqOX8o7cA_0DLdPs_BYCX37tvw/viewform");
+				}
+				else {
+					alert('Invalid Input');
+				}
+			}
+			else if(pass == hollykey){	
+				let option = window.prompt("1) Submit new communication. 2) View communications. 3) Submit Important Communication","")
+				if(option == "1"){
+					window.open("https://docs.google.com/forms/d/18VMldUZ33w_rGaYoVLBCPWmXPgda0ncIy5PozNL90KQ/edit");
+				}
+				else if(option == "2"){
+					window.open("https://docs.google.com/spreadsheets/d/1PX-dtzj67vj7MVaOUDBtMuyGyLboNwU4xYfqf5BdwPI/edit?resourcekey#gid=904690958");
+				}
+				else if(option == "3"){
+					window.open("https://docs.google.com/forms/d/e/1FAIpQLSd9yqqNefQPKL3SEe5BSoqfpqOX8o7cA_0DLdPs_BYCX37tvw/viewform");
+				}
+				else {
+					alert('Invalid Input');
+				}
+			}
+			else if(pass == mulkey){	
+				let option = window.prompt("1) Submit new communication. 2) View communications. 3) Submit Important Communication","")
+				if(option == "1"){
+					window.open("https://docs.google.com/forms/d/1WVAFHnUc8U0K1w35LelVpEKgUvSY-khmz3ixCcwmxcI/edit#responses");
+				}
+				else if(option == "2"){
+					window.open("https://docs.google.com/spreadsheets/d/13NJCjgo8kGMZJaPMnMKNjduPXggjQin_BWW8kiaPa3E/edit?resourcekey#gid=1408610920");
+				}
+				else if(option == "3"){
+					window.open("https://docs.google.com/forms/d/e/1FAIpQLSd9yqqNefQPKL3SEe5BSoqfpqOX8o7cA_0DLdPs_BYCX37tvw/viewform");
+				}
+				else {
+					alert('Invalid Input');
+				}
+			}
+			else if(pass == primkey){	
+				let option = window.prompt("1) Submit new communication. 2) View communications. 3) Submit Important Communication","")
+				if(option == "1"){
+					window.open("https://docs.google.com/forms/d/1dg_COdmb-Ac7xu7ZXh457adReIaFoSdfkrJJhilY6sI/edit");
+				}
+				else if(option == "2"){
+					window.open("https://docs.google.com/spreadsheets/d/1T-ECKEziiHZWDBggVjs-Qcvzw1ODCXDvS9gBxtRc7zU/edit?resourcekey#gid=496797329");
+				}
+				else if(option == "3"){
+					window.open("https://docs.google.com/forms/d/e/1FAIpQLSd9yqqNefQPKL3SEe5BSoqfpqOX8o7cA_0DLdPs_BYCX37tvw/viewform");
+				}
+				else {
+					alert('Invalid Input');
 				}
 			}
 		}
@@ -249,6 +394,7 @@
 			<a style="padding-right: 5%" class="tm-text-gray" onclick="frms('pdf')">PDF Reports</a>
 			<a style="padding-right: 5%" class="tm-text-gray" onclick="frms('policies')">Policies & Procedures</a>
 			<a style="padding-right: 5%" class="tm-text-gray" href="August 2023 Newsletter.pdf">Newsletter</a>
+			<a style="padding-right: 5%" class="tm-text-gray" onclick="frms('qa')">Q&A</a>
 	</p>
 
             <div class="navbar navbar-default navbar-fixed-top">
