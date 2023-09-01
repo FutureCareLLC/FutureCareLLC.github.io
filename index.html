@@ -1,4 +1,841 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Future Care LLC</title>
+    <!--
+
+    Template 2103 Central
+
+	http://www.tooplate.com/view/2103-central
+
+    -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">
+    <!-- Google web font "Open Sans" -->
+    <link rel="stylesheet" href="font-awesome-4.5.0/css/font-awesome.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <link rel="stylesheet" href="css/tooplate-style.css">
+    <!-- tooplate style -->
+
+    <script>
+		//passkey notes: manager initials + "-" + random digits + mmyy
+		//managers
+        var renderPage = true;
+		let masterbarb = "25782"; //barbara
+		let mastervick = "67392"; //vickie
+		let mastermeh = "08010"; //mehala
+		let masterali = "89246"; //alise
+		let monetenkey = "tg-78445"; //Tracy Gaither
+		let monetwelvekey = "kg-78534-112"; //Kelly Garcia-
+		let monefourteenkey = "es-28012"; //Ed Sharp-
+		let monesixteenkey = "kg-78534-116"; //Kelly Garcia-
+		let mtimberkey = "tb-87380"; //Tonya Bowles-
+		let mhemkey = "kg-70929"; //Kylie Garvey-
+		let mhollykey = "sk-56282"; //Shawn Keenan
+		let mmulkey = "dc-63726"; //Daun Cerny-
+		let mprimkey = "rt-62646"; //Roger Thyng-
+		
+		let onetenkey = "64512";
+		let onetwelvekey = "89276"; 
+		let onefourteenkey = "37819";
+		let onesixteenkey = "99245"; 
+		let timberkey = "87613";
+		let hemkey = "08914"; 
+		let hollykey = "01295";
+		let mulkey = "79833";
+		let primkey = "24218";
+		var pass;
+		document.addEventListener('contextmenu', event => event.preventDefault());
+		document.onkeydown = function(e)
+		{
+			if(event.keyCode == 123)
+			{
+				return false;
+			}
+			if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0))
+			{
+				return false;
+			}
+			if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0))
+			{
+				return false;
+			}
+			if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0))
+			{
+				return false;
+			}
+			if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0))
+			{
+			  return false;
+			}
+		}
+        if (navigator.userAgent.indexOf('MSIE') !== -1
+            || navigator.appVersion.indexOf('Trident/') > 0) {
+            /* Microsoft Internet Explorer detected in. */
+            alert("Please view this in a modern browser such as Chrome or Microsoft Edge.");
+            renderPage = false;
+        }
+	function employee_password() {
+		window.pass = window.prompt("Password:","")
+		//this code acknowledges the manager and gives access to the appropriate house
+		if(pass == masterali || pass == masterbarb || pass == mastervick || pass == mastermeh || pass == monetenkey || pass == monetwelvekey || pass == monefourteenkey || pass == monesixteenkey || pass == mtimberkey || pass == mhemkey || pass == mhollykey || pass == mmulkey || pass == mprimkey || pass == onetenkey || pass == onetwelvekey || pass == onefourteenkey || pass == onesixteenkey || pass == timberkey || pass == hemkey || pass == hollykey || pass == mulkey || pass == primkey){
+			document.getElementById("employee-nav").style.display = "block";
+			//insert comms here
+			let temparr = [];
+			let onetenarr = [];
+			let onetwelvearr = [];
+			let onefourteenarr = [];
+			let onesixteenarr = [];
+			let timberarr = [];
+			let hemarr = [];
+			let hollyarr = [];
+			let mularr = [];
+			let primarr = [];
+			var checked = "False";
+			function importantcomms(){
+				if(document.getElementById('testing').textContent.includes("]")){
+					thearray = document.getElementById('testing').textContent.split("],[");
+					i = thearray.length
+					x = 0
+					temparr = temparr.concat(thearray[0]);
+					if(checked == "False"){
+						var masterlocal = 'none'
+						if(pass == masterali || pass == masterbarb || pass == mastervick || pass == mastermeh){
+							while(masterlocal == 'none'){
+								var yn = window.prompt("Is the location in Rolla? y/n","")
+								if(yn == "y"){
+									masterlocal = window.prompt("110, 112, 114, 116, (timber)creek", "");
+								}
+								else if(yn == "n"){
+									masterlocal = window.prompt("(hem)lock, (holly)hock, (mul)berry, (prim)rose", "");
+								}
+							}
+						}
+						while(x < i){
+							if(pass == onetenkey || pass == monetenkey || masterlocal == "110"){
+								if(thearray[x].includes("110")){
+									onetenarr = onetenarr.concat(thearray[x]);
+									checked = "True";
+								}
+							}
+							else if(pass == onetwelvekey || pass == monetwelvekey || masterlocal == "112"){
+								if(thearray[x].includes("112")){
+									onetwelvearr = onetwelvearr.concat(thearray[x]);
+									checked = "True";
+								}
+							}
+							else if(pass == onefourteenkey || pass == monefourteenkey || masterlocal == "114"){
+								if(thearray[x].includes("114")){
+									onefourteenarr = onefourteenarr.concat(thearray[x]);
+									checked = "True";
+								}
+							}
+							else if(pass == onesixteenkey || pass == monesixteenkey || masterlocal == "116"){
+								if(thearray[x].includes("116")){
+									onesixteenarr = onesixteenarr.concat(thearray[x]);
+									checked = "True";
+								}
+							}
+							else if(pass == timberkey || pass == mtimberkey || masterlocal == "timber"){
+								if(thearray[x].includes("timber")){
+									timberarr = timberarr.concat(thearray[x]);
+									checked = "True";
+								}
+							}
+							else if(pass == hemkey || pass == mhemkey || masterlocal == "hem"){
+								if(thearray[x].includes("hem")){
+									hemarr = hemarr.concat(thearray[x]);
+									checked = "True";
+								}
+							}
+							else if(pass == hollykey || pass == mhollykey || masterlocal == "holly"){
+								if(thearray[x].includes("holly")){
+									hollyarr = hollyarr.concat(thearray[x]);
+									checked = "True";
+								}
+							}
+							else if(pass == mulkey || pass == mmulkey || masterlocal == "mul"){
+								if(thearray[x].includes("mul")){
+									mularr = mularr.concat(thearray[x]);
+									checked = "True";
+								}
+							}
+							else if(pass == primkey || pass == mprimkey || masterlocal == "prim"){
+								if(thearray[x].includes("prim")){
+									primarr = primarr.concat(thearray[x]);
+									checked = "True";
+								}
+							}
+							x++;
+						}
+						//show comm alerts
+						if (pass == onetenkey || pass == monetenkey){
+							temparr = onetenarr[onetenarr.length - 1].split(',');	
+						}
+						else if (pass == onetwelvekey || pass == monetwelvekey){
+							temparr = onetwelvearr[onetwelvearr.length - 1].split(',');	
+						}
+						else if (pass == onefourteenkey || pass == monefourteenkey){
+							temparr = onefourteenarr[onefourteenarr.length - 1].split(',');	
+						}
+						else if (pass == onesixteenkey || pass == monesixteenkey){
+							temparr = onesixteenarr[onesixteenarr.length - 1].split(',');	
+						}
+						else if (pass == timberkey || pass == mtimberkey){
+							temparr = timberarr[timberarr.length - 1].split(',');	
+						}
+						else if (pass == hemkey || pass == mhemkey){
+							temparr = hemarr[hemarr.length - 1].split(',');	
+						}
+						else if (pass == hollykey || pass == mhollykey){
+							temparr = hollyarr[hollyarr.length - 1].split(',');	
+						}
+						else if (pass == mulkey || pass == mmulkey){
+							temparr = mularr[mularr.length - 1].split(',');	
+						}
+						else if (pass == primkey || pass == mprimkey){
+							temparr = primarr[primarr.length - 1].split(',');	
+						}
+						//house
+						if(temparr[2].replace('"','').replace('"','').replace("[","").replace("[","").replace("]","").replace("]","") != "" && temparr[2].replace('"','').replace('"','').replace("[","").replace("[","").replace("]","").replace("]","") != "na"){
+							tempstr = "Important House Communication: " + temparr[2].replace('"','').replace('"','').replace("[","").replace("[","").replace("]","").replace("]","");
+							document.getElementById('important-comms-house').textContent = tempstr;
+						}
+					}
+				}
+			};
+			setInterval(importantcomms, 3000);
+		}
+		else{
+			window.alert("Incorrect Password!");
+		}
+	}
+	function frms(frms){
+		if(frms == 'timeclock'){
+			window.open("https://docs.google.com/forms/d/e/1FAIpQLSfT43EQMQche4iS0Lv3k0N7uqymf8Bu5lunH2TNQ8RwMaHpsA/viewform?usp=sf_link")
+		}
+		else if(frms == "qa"){
+			window.open("https://docs.google.com/forms/d/e/1FAIpQLSdoUEnqF03PugHPon_tKzcNh23aJ5xEyrhHTB_Pv_qOv4JPyA/viewform");
+		}
+		else if(frms == 'behaviors'){
+			//TODO
+			window.open("")
+			alert('behaviors clicked')
+		}
+		else if(frms == 'communications'){
+			if(pass == onetenkey || pass == monetenkey){	
+				if(pass == onetenkey){
+					let option = window.prompt("1) Submit new communication. 2) View communications.","")
+					if(option == "1"){
+						window.open("https://docs.google.com/forms/d/e/1FAIpQLSfgwCIhvNudSK51NhK01PeMyK8AeeT0sGGQD_qIzcun-uyL3w/viewform?usp=sf_link");
+					}
+					else if(option == "2"){
+						window.open("https://docs.google.com/spreadsheets/d/1BgsbeKTfj2c3acuQi4A3SCe3ZyG-UPZXwfFbT1CXZmw/edit?usp=sharing");
+					}
+					else {
+						alert('Invalid Input');
+					}
+				}
+				else if(pass == monetenkey){
+					let option = window.prompt("1) Submit new communication. 2) View communications. 3) Submit Important Communication","")
+					if(option == "1"){
+						window.open("https://docs.google.com/forms/d/e/1FAIpQLSfgwCIhvNudSK51NhK01PeMyK8AeeT0sGGQD_qIzcun-uyL3w/viewform?usp=sf_link");
+					}
+					else if(option == "2"){
+						window.open("https://docs.google.com/spreadsheets/d/1BgsbeKTfj2c3acuQi4A3SCe3ZyG-UPZXwfFbT1CXZmw/edit?usp=sharing");
+					}
+					else if(option == "3" && pass == monetenkey){
+						window.open("https://docs.google.com/forms/d/e/1FAIpQLSd9yqqNefQPKL3SEe5BSoqfpqOX8o7cA_0DLdPs_BYCX37tvw/viewform");
+					}
+					else {
+						alert('Invalid Input');
+					}
+				}
+			}
+			else if(pass == onetwelvekey || pass == monetwelvekey){	
+				if (pass == onetwelvekey){
+					let option = window.prompt("1) Submit new communication. 2) View communications.","")
+					if(option == "1"){
+						window.open("https://docs.google.com/forms/d/1sToWpWyRyz5_myLaFpjSfMZefGBEeMMREPDsaMsSjd0/edit");
+					}
+					else if(option == "2"){
+						window.open("https://docs.google.com/spreadsheets/d/1CTmkKVePA7LsoNliGGvC8NTYm164OmYaPRPTFLXJefw/edit?resourcekey#gid=88238199");
+					}
+					else {
+						alert('Invalid Input');
+					}
+				}
+				else if (pass == monetwelvekey){
+					let option = window.prompt("1) Submit new communication. 2) View communications. 3) Submit Important Communication","")
+					if(option == "1"){
+						window.open("https://docs.google.com/forms/d/1sToWpWyRyz5_myLaFpjSfMZefGBEeMMREPDsaMsSjd0/edit");
+					}
+					else if(option == "2"){
+						window.open("https://docs.google.com/spreadsheets/d/1CTmkKVePA7LsoNliGGvC8NTYm164OmYaPRPTFLXJefw/edit?resourcekey#gid=88238199");
+					}
+					else if(option == "3"){
+						window.open("https://docs.google.com/forms/d/e/1FAIpQLSd9yqqNefQPKL3SEe5BSoqfpqOX8o7cA_0DLdPs_BYCX37tvw/viewform");
+					}
+					else {
+						alert('Invalid Input');
+					}
+				}
+			}
+			else if(pass == onefourteenkey || pass == monefourteenkey){	
+				if(pass == onefourteenkey){
+					let option = window.prompt("1) Submit new communication. 2) View communications.","")
+					if(option == "1"){
+						window.open("https://docs.google.com/forms/d/1U3rWYcoLv84D0hQDjIwdMW-UYvbRyAAFeRvDb9xrhzQ/edit");
+					}
+					else if(option == "2"){
+						window.open("https://docs.google.com/spreadsheets/d/1UKWXaI0Rsz7-uY2eNvErJa8e5hKRN2Z0dOTeIixF_0E/edit?resourcekey#gid=1010212790");
+					}
+					else {
+						alert('Invalid Input');
+					}
+				}
+				else if(pass == monefourteenkey){
+					let option = window.prompt("1) Submit new communication. 2) View communications. 3) Submit Important Communication","")
+					if(option == "1"){
+						window.open("https://docs.google.com/forms/d/1U3rWYcoLv84D0hQDjIwdMW-UYvbRyAAFeRvDb9xrhzQ/edit");
+					}
+					else if(option == "2"){
+						window.open("https://docs.google.com/spreadsheets/d/1UKWXaI0Rsz7-uY2eNvErJa8e5hKRN2Z0dOTeIixF_0E/edit?resourcekey#gid=1010212790");
+					}
+					else if(option == "3"){
+						window.open("https://docs.google.com/forms/d/e/1FAIpQLSd9yqqNefQPKL3SEe5BSoqfpqOX8o7cA_0DLdPs_BYCX37tvw/viewform");
+					}
+					else {
+						alert('Invalid Input');
+					}
+				}
+			}
+			else if(pass == onesixteenkey || pass == monesixteenkey){	
+				if(pass == onesixteenkey){
+					let option = window.prompt("1) Submit new communication. 2) View communications.","")
+					if(option == "1"){
+						window.open("https://docs.google.com/forms/d/123fgyVY5DUC2T-xX9kkQYHdExC6g7VAm7o77ddsd1cc/edit");
+					}
+					else if(option == "2"){
+						window.open("https://docs.google.com/spreadsheets/d/1gQeL9ts9o4GEoGuKIu5gSEkoZdgimF-gFUCZulQjkqU/edit?resourcekey#gid=1624329812");
+					}
+					else {
+						alert('Invalid Input');
+					}
+				}
+				else if(pass == monesixteenkey){
+					let option = window.prompt("1) Submit new communication. 2) View communications. 3) Submit Important Communication","")
+					if(option == "1"){
+						window.open("https://docs.google.com/forms/d/123fgyVY5DUC2T-xX9kkQYHdExC6g7VAm7o77ddsd1cc/edit");
+					}
+					else if(option == "2"){
+						window.open("https://docs.google.com/spreadsheets/d/1gQeL9ts9o4GEoGuKIu5gSEkoZdgimF-gFUCZulQjkqU/edit?resourcekey#gid=1624329812");
+					}
+					else if(option == "3"){
+						window.open("https://docs.google.com/forms/d/e/1FAIpQLSd9yqqNefQPKL3SEe5BSoqfpqOX8o7cA_0DLdPs_BYCX37tvw/viewform");
+					}
+					else {
+						alert('Invalid Input');
+					}
+				}
+			}
+			else if(pass == timberkey || pass == mtimberkey){	
+				if(pass == timberkey){
+					let option = window.prompt("1) Submit new communication. 2) View communications.","")
+					if(option == "1"){
+						window.open("https://docs.google.com/forms/d/19IoW3zRFInirxx9vuKHEwGdMoWCXLHClJAuPm79S_Po/edit");
+					}
+					else if(option == "2"){
+						window.open("https://docs.google.com/spreadsheets/d/1mw6PTV38fZrbiLLT1T9hvoj-NqCswcaVJ7KDsbr_1Lw/edit?resourcekey#gid=618975353");
+					}
+					else {
+						alert('Invalid Input');
+					}
+				}
+				else if(pass == mtimberkey){
+					let option = window.prompt("1) Submit new communication. 2) View communications. 3) Submit Important Communication","")
+					if(option == "1"){
+						window.open("https://docs.google.com/forms/d/19IoW3zRFInirxx9vuKHEwGdMoWCXLHClJAuPm79S_Po/edit");
+					}
+					else if(option == "2"){
+						window.open("https://docs.google.com/spreadsheets/d/1mw6PTV38fZrbiLLT1T9hvoj-NqCswcaVJ7KDsbr_1Lw/edit?resourcekey#gid=618975353");
+					}
+					else if(option == "3"){
+						window.open("https://docs.google.com/forms/d/e/1FAIpQLSd9yqqNefQPKL3SEe5BSoqfpqOX8o7cA_0DLdPs_BYCX37tvw/viewform");
+					}
+					else {
+						alert('Invalid Input');
+					}
+				}
+			}
+			else if(pass == hemkey || pass == mhemkey){	
+				if(pass == hemkey){
+					let option = window.prompt("1) Submit new communication. 2) View communications.","")
+					if(option == "1"){
+						window.open("https://docs.google.com/forms/d/1w_fpJONKT5jqa_uwyH5F2R10LqHFsumCgrfTk43Z9l4/edit");
+					}
+					else if(option == "2"){
+						window.open("https://docs.google.com/spreadsheets/d/1_dh5GtsEm_z5sg4RJCSAp-MclHGtii1n0b3R5fCM3a0/edit?resourcekey#gid=827042750");
+					}
+					else {
+						alert('Invalid Input');
+					}
+				}
+				else if(pass == mhemkey){
+					let option = window.prompt("1) Submit new communication. 2) View communications. 3) Submit Important Communication","")
+					if(option == "1"){
+						window.open("https://docs.google.com/forms/d/1w_fpJONKT5jqa_uwyH5F2R10LqHFsumCgrfTk43Z9l4/edit");
+					}
+					else if(option == "2"){
+						window.open("https://docs.google.com/spreadsheets/d/1_dh5GtsEm_z5sg4RJCSAp-MclHGtii1n0b3R5fCM3a0/edit?resourcekey#gid=827042750");
+					}
+					else if(option == "3"){
+						window.open("https://docs.google.com/forms/d/e/1FAIpQLSd9yqqNefQPKL3SEe5BSoqfpqOX8o7cA_0DLdPs_BYCX37tvw/viewform");
+					}
+					else {
+						alert('Invalid Input');
+					}
+				}
+			}
+			else if(pass == hollykey || pass == mhollykey){	
+				if(pass == hollykey){
+					let option = window.prompt("1) Submit new communication. 2) View communications.","")
+					if(option == "1"){
+						window.open("https://docs.google.com/forms/d/18VMldUZ33w_rGaYoVLBCPWmXPgda0ncIy5PozNL90KQ/edit");
+					}
+					else if(option == "2"){
+						window.open("https://docs.google.com/spreadsheets/d/1PX-dtzj67vj7MVaOUDBtMuyGyLboNwU4xYfqf5BdwPI/edit?resourcekey#gid=904690958");
+					}
+					else {
+						alert('Invalid Input');
+					}
+				}
+				else if(pass == mhollykey){
+					let option = window.prompt("1) Submit new communication. 2) View communications. 3) Submit Important Communication","")
+					if(option == "1"){
+						window.open("https://docs.google.com/forms/d/18VMldUZ33w_rGaYoVLBCPWmXPgda0ncIy5PozNL90KQ/edit");
+					}
+					else if(option == "2"){
+						window.open("https://docs.google.com/spreadsheets/d/1PX-dtzj67vj7MVaOUDBtMuyGyLboNwU4xYfqf5BdwPI/edit?resourcekey#gid=904690958");
+					}
+					else if(option == "3"){
+						window.open("https://docs.google.com/forms/d/e/1FAIpQLSd9yqqNefQPKL3SEe5BSoqfpqOX8o7cA_0DLdPs_BYCX37tvw/viewform");
+					}
+					else {
+						alert('Invalid Input');
+					}
+				}
+			}
+			else if(pass == mulkey || pass == mmulkey){	
+				if(pass == mulkey){
+					let option = window.prompt("1) Submit new communication. 2) View communications.","")
+					if(option == "1"){
+						window.open("https://docs.google.com/forms/d/1WVAFHnUc8U0K1w35LelVpEKgUvSY-khmz3ixCcwmxcI/edit#responses");
+					}
+					else if(option == "2"){
+						window.open("https://docs.google.com/spreadsheets/d/13NJCjgo8kGMZJaPMnMKNjduPXggjQin_BWW8kiaPa3E/edit?resourcekey#gid=1408610920");
+					}
+					else {
+						alert('Invalid Input');
+					}
+				}
+				else if(pass == mmulkey){
+					let option = window.prompt("1) Submit new communication. 2) View communications. 3) Submit Important Communication","")
+					if(option == "1"){
+						window.open("https://docs.google.com/forms/d/1WVAFHnUc8U0K1w35LelVpEKgUvSY-khmz3ixCcwmxcI/edit#responses");
+					}
+					else if(option == "2"){
+						window.open("https://docs.google.com/spreadsheets/d/13NJCjgo8kGMZJaPMnMKNjduPXggjQin_BWW8kiaPa3E/edit?resourcekey#gid=1408610920");
+					}
+					else if(option == "3"){
+						window.open("https://docs.google.com/forms/d/e/1FAIpQLSd9yqqNefQPKL3SEe5BSoqfpqOX8o7cA_0DLdPs_BYCX37tvw/viewform");
+					}
+					else {
+						alert('Invalid Input');
+					}
+				}
+			}
+			else if(pass == primkey || pass == mprimkey){	
+				if(pass == primkey){
+				let option = window.prompt("1) Submit new communication. 2) View communications.","")
+					if(option == "1"){
+						window.open("https://docs.google.com/forms/d/1dg_COdmb-Ac7xu7ZXh457adReIaFoSdfkrJJhilY6sI/edit");
+					}
+					else if(option == "2"){
+						window.open("https://docs.google.com/spreadsheets/d/1T-ECKEziiHZWDBggVjs-Qcvzw1ODCXDvS9gBxtRc7zU/edit?resourcekey#gid=496797329");
+					}
+					else {
+						alert('Invalid Input');
+					}
+				}
+				else if(pass == mprimkey){
+					let option = window.prompt("1) Submit new communication. 2) View communications. 3) Submit Important Communication","")
+					if(option == "1"){
+						window.open("https://docs.google.com/forms/d/1dg_COdmb-Ac7xu7ZXh457adReIaFoSdfkrJJhilY6sI/edit");
+					}
+					else if(option == "2"){
+						window.open("https://docs.google.com/spreadsheets/d/1T-ECKEziiHZWDBggVjs-Qcvzw1ODCXDvS9gBxtRc7zU/edit?resourcekey#gid=496797329");
+					}
+					else if(option == "3"){
+						window.open("https://docs.google.com/forms/d/e/1FAIpQLSd9yqqNefQPKL3SEe5BSoqfpqOX8o7cA_0DLdPs_BYCX37tvw/viewform");
+					}
+					else {
+						alert('Invalid Input');
+					}
+				}
+			}
+		}
+		else if(frms == 'daily'){
+			if(pass == onetenkey){
+				let option = window.prompt("1) Submit new communication. 2) View communications","")
+				if(option == "1"){
+					window.open("https://docs.google.com/forms/d/e/1FAIpQLSfgwCIhvNudSK51NhK01PeMyK8AeeT0sGGQD_qIzcun-uyL3w/viewform?usp=sf_link");
+				}
+				else if(option == "2"){
+					window.open("https://docs.google.com/spreadsheets/d/1BgsbeKTfj2c3acuQi4A3SCe3ZyG-UPZXwfFbT1CXZmw/edit?usp=sharing");
+				}
+			}
+		}
+		else if(frms == 'pdf'){
+			window.open("https://docs.google.com/forms/d/e/1FAIpQLSctu28igUup9L89-yCPJUHujw0kv77TMuI10Fff9LZQvbPZxA/viewform?usp=sf_link")
+		}
+		else if(frms == 'policies'){
+			window.open("https://docs.google.com/document/d/1PB2mUZGqUUPPxRa4yelt-pAe60BOMxQtf2R53Vf-E88/edit?usp=sharing")
+		}
+	}
+    </script>
+
+</head>
+
+<body>
+	<p id='testing' style="display: none"></p>
+	<p id='important-comms-house' style="padding-left: 2.5%"></p>
+    <!-- Loader -->
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
+    <div class="container">
+        <section class="tm-section-head" id="top">
+            <header id="header" class="text-center tm-text-gray">
+                <h1>Future Care LLC</h1>
+                <p>Where We Care About Your Future</p>
+            </header>
+
+            <nav class="navbar narbar-light">
+                <a class="navbar-brand tm-text-gray" href="#">
+                    Menu
+                </a>
+                <button type="button" id="nav-toggle" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#mainNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">
+                        <i class="fa fa-navicon tm-fa-toggler-icon"></i>
+                    </span>
+                </button>
+                <div id="mainNav" class="collapse navbar-collapse tm-bg-white">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link tm-text-gray" href="#top">Home
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link tm-text-gray" href="#tm-section-2">Info</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link tm-text-gray" href="#tm-section-6">Contact</a>
+                        </li>
+			<li class="nav-item">
+				<a class="nav-link tm-text-gray" href="#tm-section-6" onclick="employee_password()">Employee Resources</a>
+			</li>
+                    </ul>
+                </div>
+            </nav>
+	<p id="employee-nav" style="display: none">
+			<a style="padding-right: 5%" class="tm-text-gray" onclick="frms('timeclock')">Time Clock</a>
+			<a style="padding-right: 5%" class="tm-text-gray" onclick="frms('communications')">Communications</a>
+			<!--<a style="padding-right: 5%" class="tm-text-gray" onclick="frms('behaviors')">Behaviors</a>-->
+			<a style="padding-right: 5%" class="tm-text-gray" onclick="frms('pdf')">PDF Reports</a>
+			<a style="padding-right: 5%" class="tm-text-gray" onclick="frms('policies')">Policies & Procedures</a>
+			<a style="padding-right: 5%" class="tm-text-gray" href="September 2023 Newsletter.pdf">Newsletter</a>
+			<a style="padding-right: 5%" class="tm-text-gray" onclick="frms('qa')">Q&A</a>
+	</p>
+
+            <div class="navbar navbar-default navbar-fixed-top">
+                <a href="/index.html" class="navbar-brand"></a>
+                <botton class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mydropdown">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </botton>
+
+            </div>
+
+            <div class="collapse navbar-collapse" id="mydropdown">
+
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">info</a>
+                    </li>
+                    <li>
+                        <a href="#">contact</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="row" id="tm-section-1">
+            <div class="col-lg-12 tm-slider-col">
+                <div class="tm-img-slider">
+                    <div class="tm-img-slider-item" href="img/futurecare.JPG">
+                        <img src="img/futurecare.JPG" alt="Image" class="tm-slider-img">
+                    </div>
+                    <div class="tm-img-slider-item" href="img/welcome.JPG">
+                        <img src="img/welcome.JPG" alt="Image" class="tm-slider-img">
+                    </div>
+                    <div class="tm-img-slider-item" href="img/believe.JPG">
+                        <img src="img/believe.JPG" alt="Image" class="tm-slider-img">
+                    </div>
+                    <div class="tm-img-slider-item" href="img/hello.JPG">
+                        <img src="img/hello.JPG" alt="Image" class="tm-slider-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="tm-section-2 tm-section-mb" id="tm-section-2">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-lg-0 mb-md-5 mb-5 pr-md-5">
+                    <header class="text-center">
+                    </header>
+                    <h2>Meet the Team</h2>
+					<p>Future Care knows the importance of a strong team, and a strong family. Meet our trusted individuals here for you.</p>
+                    <a href="#tm-section-3" class="btn tm-btn-pad-2 float-right">Learn More</a>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-lg-0 mb-md-5 mb-5 pr-md-5">
+                    <header class="text-center">
+                    </header>
+                    <h2><a href="https://docs.google.com/forms/d/e/1FAIpQLSe5inHCWmb-8dfjpTZLVVKZBttpK3H3DkhB8QcrHa-xUbxXkg/viewform?usp=sf_link">Join Today</a></h2>
+                    <p> Future Care knows the value of community, where together, we can do so much. Join us today where every person makes a difference.
+                    </p>
+
+                    <!--a href="#tm-section-4" class="btn tm-btn-pad-2 float-right">Learn More</a-->
+                </div>
+
+                <div class="col-xl-4 col-lg-4 col-md-12">
+                    <h2>Contact Us</h2>
+					<p>604 Black Street, Rolla, MO - 65401<br>(573) 578-2303</p>
+                </div>
+            </div>
+        </section>
+
+        <!--section class="tm-section-3 tm-section-mb" id="tm-section-3">
+            <div class="col-lg-12 tm-slider-col">
+                <div class="tm-img-slider">
+                    <div class="tm-img-slider-item" href="img/gallery-img-01.jpg">
+                        <img src="img/gallery-img-01.jpg" alt="Image" class="tm-slider-img">
+                    </div>
+                    <div class="tm-img-slider-item" href="img/gallery-img-02.jpg">
+                        <img src="img/gallery-img-02.jpg" alt="Image" class="tm-slider-img">
+                    </div>
+                    <div class="tm-img-slider-item" href="img/gallery-img-03.jpg">
+                        <img src="img/gallery-img-03.jpg" alt="Image" class="tm-slider-img">
+                    </div>
+                    <div class="tm-img-slider-item" href="img/gallery-img-04.jpg">
+                        <img src="img/gallery-img-04.jpg" alt="Image" class="tm-slider-img">
+                    </div>
+                </div>
+            </div>
+        </section-->
+<!--
+        <section class="tm-section-4 tm-section-mb" id="tm-section-4">
+            <div class="row">
+
+            </div>
+        </section>
+
+        <section class="tm-section-5" id="tm-section-5">
+            <div class="row">
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="image fit">
+                        <img src="img/tm-sc4-img-1.jpg" class="img-fluid">
+                    </div>
+                </div>
+
+                <div class="col-lg-8 col-md-12 col-sm-12 pl-lg-0">
+                    <div class="media tm-media">
+                        <img src="img/sc4-img-2.jpg" class="img-responsive tm-media-img">
+                        <div class="media-body tm-box-5">
+                            <h2>Etiam tincidunt ullamcorper</h2>
+                            <p class="mb-0">Maecenas tempor nibh sed rhoncus ullamcorper. Ut porttitor ante non accumsan pretium. Maecenas iaculis arcu sed porta accumsan.</p>
+                        </div>
+                    </div>
+                    <div class="media tm-media">
+                        <img src="img/sc4-img-3.jpg" class="img-responsive tm-media-img">
+                        <div class="media-body tm-box-5">
+                            <h2>Sed et finibus tortor</h2>
+                            <p class="mb-0">Suspendisse iaculis leo libero, ut congue augue feugiat eu. Nulla faucibus non odio sed auctor. Vestibulum a tincidunt dolor, eget eleifend lacus.</p>
+                        </div>
+                    </div>
+                    <div class="media tm-media">
+                        <img src="img/sc4-img-4.jpg" class="img-responsive tm-media-img">
+                        <div class="media-body tm-box-5">
+                            <h2>Vestibulum sit amet</h2>
+                            <p class="mb-0"> Cras aliquet urna ut sapien tincidunt, quis malesuada elit facilisis. Vestibulum sit amet tortor velit. Nam elementum nibh a libero pharetra elementum. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="tm-section-6" id="tm-section-6">
+            <div class="row">
+                <div class="col-lg-7 col-md-7 col-xs-12">
+                    <div class="contact_message">
+                        <form action="" method="post" class="contact-form">
+                            <div class="row mb-2">
+                                <div class="form-group col-xl-6">
+                                    <input type="text" id="contact_name" name="contact_name" class="form-control" placeholder="Name" required/>
+                                </div>
+                                <div class="form-group col-xl-6 pl-xl-1">
+                                    <input type="email" id="contact_email" name="contact_email" class="form-control" placeholder="Email" required/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="contact_message" name="contact_message" class="form-control" rows="6" placeholder="Message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn  tm-btn-submit float-right btn-big">Send It Now</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 col-md-5 col-xs-12 tm-contact-right">
+                    <div class="tm-address-box">
+                        <h2 class="mb-4">Contact Us</h2>
+			<p class="mb-5">A business led by your local community, commited to the present and future care of your loved ones.</p>
+                        <address>
+                            604 Black Street, Rolla, MO - 65401
+                            <br> (573) 578-2303
+                        </address>
+                    </div>
+                </div>
+            </div>
+        </section>
+-->
+        <footer class="mt-5">
+            <p class="text-center">Copyright © 2023 Future Care LLC</p>
+        </footer>
+    </div>
+
+    <!-- load JS files -->
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <!-- https://popper.js.org/ -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- https://getbootstrap.com/ -->
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <!-- Slick Carousel -->
+
+    <script>
+        function setCarousel() {
+            var slider = $('.tm-img-slider');
+
+            if (slider.hasClass('slick-initialized')) {
+                slider.slick('destroy');
+            }
+
+            if ($(window).width() > 991) {
+                // Slick carousel
+                slider.slick({
+                    autoplay: true,
+                    fade: true,
+                    speed: 800,
+                    infinite: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                });
+            } else {
+                slider.slick({
+                    autoplay: true,
+                    fade: true,
+                    speed: 800,
+                    infinite: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                });
+            }
+        }
+
+        $(document).ready(function () {
+            if (renderPage) {
+                $('body').addClass('loaded');
+            }
+
+            setCarousel();
+
+            $(window).resize(function () {
+                setCarousel();
+            });
+
+            // Close menu after link click
+            $('.nav-link').click(function () {
+                $('#mainNav').removeClass('show');
+            });
+
+            // https://css-tricks.com/snippets/jquery/smooth-scrolling/
+            // Select all links with hashes
+            $('a[href*="#"]')
+                // Remove links that don't actually link to anything
+                .not('[href="#"]')
+                .not('[href="#0"]')
+                .click(function (event) {
+                    // On-page links
+                    if (
+                        location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+                        &&
+                        location.hostname == this.hostname
+                    ) {
+                        // Figure out element to scroll to
+                        var target = $(this.hash);
+                        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                        // Does a scroll target exist?
+                        if (target.length) {
+                            // Only prevent default if animation is actually gonna happen
+                            event.preventDefault();
+                            $('html, body').animate({
+                                scrollTop: target.offset().top + 1
+                            }, 1000, function () {
+                                // Callback after animation
+                                // Must change focus!
+                                var $target = $(target);
+                                $target.focus();
+                                if ($target.is(":focus")) { // Checking if the target was focused
+                                    return false;
+                                } else {
+                                    $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+                                    $target.focus(); // Set focus again
+                                };
+                            });
+                        }
+                    }
+                });
+        });
+	fetch("https://script.google.com/macros/s/AKfycbzet7qFs2YnaJVL1yPdG0Ey-w3GSe7qonzloAy6SdwZ1z7TKzjfYobC_7tRX_WwhE3q/exec").then(res => res.json()).then(data => document.getElementById('testing').textContent = JSON.stringify(data).replace('content',"").replace('Timestamp','').replace('Communication For:','').replace('Important Message','').replace('{"":[["","",""],','').replace(']}',''));
+    </script>
 <script>
-<!-- code by https://www.html-code-generator.com -->
-document.write(unescape('%3C%21DOCTYPE%20html%3E%0A%3Chtml%3E%0A%0A%3Chead%3E%0A%20%20%20%20%3Cmeta%20charset%3D%22utf-8%22%3E%0A%20%20%20%20%3Cmeta%20http-equiv%3D%22X-UA-Compatible%22%20content%3D%22IE%3Dedge%22%3E%0A%20%20%20%20%3Cmeta%20name%3D%22viewport%22%20content%3D%22width%3Ddevice-width%2C%20initial-scale%3D1%22%3E%0A%0A%20%20%20%20%3Ctitle%3EFuture%20Care%20LLC%3C/title%3E%0A%20%20%20%20%3C%21--%0A%0A%20%20%20%20Template%202103%20Central%0A%0A%09http%3A//www.tooplate.com/view/2103-central%0A%0A%20%20%20%20--%3E%0A%20%20%20%20%3Clink%20rel%3D%22stylesheet%22%20href%3D%22https%3A//fonts.googleapis.com/css%3Ffamily%3DOpen+Sans%3A300%2C400%22%3E%0A%20%20%20%20%3C%21--%20Google%20web%20font%20%22Open%20Sans%22%20--%3E%0A%20%20%20%20%3Clink%20rel%3D%22stylesheet%22%20href%3D%22font-awesome-4.5.0/css/font-awesome.min.css%22%3E%0A%20%20%20%20%3C%21--%20Font%20Awesome%20--%3E%0A%20%20%20%20%3Clink%20rel%3D%22stylesheet%22%20href%3D%22css/bootstrap.min.css%22%3E%0A%20%20%20%20%3Clink%20rel%3D%22stylesheet%22%20type%3D%22text/css%22%20href%3D%22slick/slick.css%22%20/%3E%0A%20%20%20%20%3Clink%20rel%3D%22stylesheet%22%20type%3D%22text/css%22%20href%3D%22slick/slick-theme.css%22%20/%3E%0A%20%20%20%20%3Clink%20rel%3D%22stylesheet%22%20href%3D%22css/tooplate-style.css%22%3E%0A%20%20%20%20%3C%21--%20tooplate%20style%20--%3E%0A%0A%20%20%20%20%3Cscript%3E%0A%09%09//passkey%20notes%3A%20manager%20initials%20+%20%22-%22%20+%20random%20digits%20+%20mmyy%0A%09%09//managers%0A%20%20%20%20%20%20%20%20var%20renderPage%20%3D%20true%3B%0A%09%09let%20monetenkey%20%3D%20%22tg-78445%22%3B%20//Tracy%20Gaither%0A%09%09let%20monetwelvekey%20%3D%20%22kg-78534-112%22%3B%20//Kelly%20Garcia-%0A%09%09let%20monefourteenkey%20%3D%20%22es-28012%22%3B%20//Ed%20Sharp-%0A%09%09let%20monesixteenkey%20%3D%20%22kg-78534-116%22%3B%20//Kelly%20Garcia-%0A%09%09let%20mtimberkey%20%3D%20%22tb-87380%22%3B%20//Tonya%20Bowles-%0A%09%09let%20mhemkey%20%3D%20%22kg-70929%22%3B%20//Kylie%20Garvey-%0A%09%09let%20mhollykey%20%3D%20%22sk-56282%22%3B%20//Shawn%20Keenan%0A%09%09let%20mmulkey%20%3D%20%22dc-63726%22%3B%20//Daun%20Cerny-%0A%09%09let%20mprimkey%20%3D%20%22rt-62646%22%3B%20//Roger%20Thyng-%0A%09%09%0A%09%09let%20onetenkey%20%3D%20%2264512%22%3B%0A%09%09let%20onetwelvekey%20%3D%20%2289276%22%3B%20%0A%09%09let%20onefourteenkey%20%3D%20%2237819%22%3B%0A%09%09let%20onesixteenkey%20%3D%20%2299245%22%3B%20%0A%09%09let%20timberkey%20%3D%20%2287613%22%3B%0A%09%09let%20hemkey%20%3D%20%2208914%22%3B%20%0A%09%09let%20hollykey%20%3D%20%2201295%22%3B%0A%09%09let%20mulkey%20%3D%20%2279833%22%3B%0A%09%09let%20primkey%20%3D%20%2224218%22%3B%0A%09%09var%20pass%3B%0A%09%09document.addEventListener%28%27contextmenu%27%2C%20event%20%3D%3E%20event.preventDefault%28%29%29%3B%0A%09%09document.onkeydown%20%3D%20function%28e%29%0A%09%09%7B%0A%09%09%09if%28event.keyCode%20%3D%3D%20123%29%0A%09%09%09%7B%0A%09%09%09%09return%20false%3B%0A%09%09%09%7D%0A%09%09%09if%28e.ctrlKey%20%26%26%20e.shiftKey%20%26%26%20e.keyCode%20%3D%3D%20%27I%27.charCodeAt%280%29%29%0A%09%09%09%7B%0A%09%09%09%09return%20false%3B%0A%09%09%09%7D%0A%09%09%09if%28e.ctrlKey%20%26%26%20e.shiftKey%20%26%26%20e.keyCode%20%3D%3D%20%27J%27.charCodeAt%280%29%29%0A%09%09%09%7B%0A%09%09%09%09return%20false%3B%0A%09%09%09%7D%0A%09%09%09if%28e.ctrlKey%20%26%26%20e.keyCode%20%3D%3D%20%27U%27.charCodeAt%280%29%29%0A%09%09%09%7B%0A%09%09%09%09return%20false%3B%0A%09%09%09%7D%0A%09%09%09if%28e.ctrlKey%20%26%26%20e.shiftKey%20%26%26%20e.keyCode%20%3D%3D%20%27C%27.charCodeAt%280%29%29%0A%09%09%09%7B%0A%09%09%09%20%20return%20false%3B%0A%09%09%09%7D%0A%09%09%7D%0A%20%20%20%20%20%20%20%20if%20%28navigator.userAgent.indexOf%28%27MSIE%27%29%20%21%3D%3D%20-1%0A%20%20%20%20%20%20%20%20%20%20%20%20%7C%7C%20navigator.appVersion.indexOf%28%27Trident/%27%29%20%3E%200%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20/*%20Microsoft%20Internet%20Explorer%20detected%20in.%20*/%0A%20%20%20%20%20%20%20%20%20%20%20%20alert%28%22Please%20view%20this%20in%20a%20modern%20browser%20such%20as%20Chrome%20or%20Microsoft%20Edge.%22%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20renderPage%20%3D%20false%3B%0A%20%20%20%20%20%20%20%20%7D%0A%09function%20employee_password%28%29%20%7B%0A%09%09window.pass%20%3D%20window.prompt%28%22Password%3A%22%2C%22%22%29%0A%09%09//this%20code%20acknowledges%20the%20manager%20and%20gives%20access%20to%20the%20appropriate%20house%0A%09%09if%28pass%20%3D%3D%20monetenkey%20%7C%7C%20pass%20%3D%3D%20monetwelvekey%20%7C%7C%20pass%20%3D%3D%20monefourteenkey%20%7C%7C%20pass%20%3D%3D%20monesixteenkey%20%7C%7C%20pass%20%3D%3D%20mtimberkey%20%7C%7C%20pass%20%3D%3D%20mhemkey%20%7C%7C%20pass%20%3D%3D%20mhollykey%20%7C%7C%20pass%20%3D%3D%20mmulkey%20%7C%7C%20pass%20%3D%3D%20mprimkey%29%7B%0A%09%09%09%0A%09%09%7D%0A%09%09if%28pass%20%3D%3D%20monetenkey%20%7C%7C%20pass%20%3D%3D%20monetwelvekey%20%7C%7C%20pass%20%3D%3D%20monefourteenkey%20%7C%7C%20pass%20%3D%3D%20monesixteenkey%20%7C%7C%20pass%20%3D%3D%20mtimberkey%20%7C%7C%20pass%20%3D%3D%20mhemkey%20%7C%7C%20pass%20%3D%3D%20mhollykey%20%7C%7C%20pass%20%3D%3D%20mmulkey%20%7C%7C%20pass%20%3D%3D%20mprimkey%20%7C%7C%20pass%20%3D%3D%20onetenkey%20%7C%7C%20pass%20%3D%3D%20onetwelvekey%20%7C%7C%20pass%20%3D%3D%20onefourteenkey%20%7C%7C%20pass%20%3D%3D%20onesixteenkey%20%7C%7C%20pass%20%3D%3D%20timberkey%20%7C%7C%20pass%20%3D%3D%20hemkey%20%7C%7C%20pass%20%3D%3D%20hollykey%20%7C%7C%20pass%20%3D%3D%20mulkey%20%7C%7C%20pass%20%3D%3D%20primkey%29%7B%0A%09%09%09document.getElementById%28%22employee-nav%22%29.style.display%20%3D%20%22block%22%3B%0A%09%09%09//insert%20comms%20here%0A%09%09%09let%20temparr%20%3D%20%5B%5D%3B%0A%09%09%09let%20onetenarr%20%3D%20%5B%5D%3B%0A%09%09%09let%20onetwelvearr%20%3D%20%5B%5D%3B%0A%09%09%09let%20onefourteenarr%20%3D%20%5B%5D%3B%0A%09%09%09let%20onesixteenarr%20%3D%20%5B%5D%3B%0A%09%09%09let%20timberarr%20%3D%20%5B%5D%3B%0A%09%09%09let%20hemarr%20%3D%20%5B%5D%3B%0A%09%09%09let%20hollyarr%20%3D%20%5B%5D%3B%0A%09%09%09let%20mularr%20%3D%20%5B%5D%3B%0A%09%09%09let%20primarr%20%3D%20%5B%5D%3B%0A%09%09%09var%20checked%20%3D%20%22False%22%3B%0A%09%09%09function%20importantcomms%28%29%7B%0A%09%09%09%09if%28document.getElementById%28%27testing%27%29.textContent.includes%28%22%5D%22%29%29%7B%0A%09%09%09%09%09thearray%20%3D%20document.getElementById%28%27testing%27%29.textContent.split%28%22%5D%2C%5B%22%29%3B%0A%09%09%09%09%09i%20%3D%20thearray.length%0A%09%09%09%09%09x%20%3D%200%0A%09%09%09%09%09temparr%20%3D%20temparr.concat%28thearray%5B0%5D%29%3B%0A%09%09%09%09%09if%28checked%20%3D%3D%20%22False%22%29%7B%0A%09%09%09%09%09%09while%28x%20%3C%20i%29%7B%0A%09%09%09%09%09%09%09if%28pass%20%3D%3D%20onetenkey%20%7C%7C%20pass%20%3D%3D%20monetenkey%29%7B%0A%09%09%09%09%09%09%09%09if%28thearray%5Bx%5D.includes%28%22110%22%29%29%7B%0A%09%09%09%09%09%09%09%09%09onetenarr%20%3D%20onetenarr.concat%28thearray%5Bx%5D%29%3B%0A%09%09%09%09%09%09%09%09%09checked%20%3D%20%22True%22%3B%0A%09%09%09%09%09%09%09%09%7D%0A%09%09%09%09%09%09%09%7D%0A%09%09%09%09%09%09%09else%20if%28pass%20%3D%3D%20onetwelvekey%20%7C%7C%20pass%20%3D%3D%20monetwelvekey%29%7B%0A%09%09%09%09%09%09%09%09if%28thearray%5Bx%5D.includes%28%22112%22%29%29%7B%0A%09%09%09%09%09%09%09%09%09onetwelvearr%20%3D%20onetwelvearr.concat%28thearray%5Bx%5D%29%3B%0A%09%09%09%09%09%09%09%09%09checked%20%3D%20%22True%22%3B%0A%09%09%09%09%09%09%09%09%7D%0A%09%09%09%09%09%09%09%7D%0A%09%09%09%09%09%09%09else%20if%28pass%20%3D%3D%20onefourteenkey%20%7C%7C%20pass%20%3D%3D%20monefourteenkey%29%7B%0A%09%09%09%09%09%09%09%09if%28thearray%5Bx%5D.includes%28%22114%22%29%29%7B%0A%09%09%09%09%09%09%09%09%09onefourteenarr%20%3D%20onefourteenarr.concat%28thearray%5Bx%5D%29%3B%0A%09%09%09%09%09%09%09%09%09checked%20%3D%20%22True%22%3B%0A%09%09%09%09%09%09%09%09%7D%0A%09%09%09%09%09%09%09%7D%0A%09%09%09%09%09%09%09else%20if%28pass%20%3D%3D%20onesixteenkey%20%7C%7C%20pass%20%3D%3D%20monesixteenkey%29%7B%0A%09%09%09%09%09%09%09%09if%28thearray%5Bx%5D.includes%28%22116%22%29%29%7B%0A%09%09%09%09%09%09%09%09%09onesixteenarr%20%3D%20onesixteenarr.concat%28thearray%5Bx%5D%29%3B%0A%09%09%09%09%09%09%09%09%09checked%20%3D%20%22True%22%3B%0A%09%09%09%09%09%09%09%09%7D%0A%09%09%09%09%09%09%09%7D%0A%09%09%09%09%09%09%09else%20if%28pass%20%3D%3D%20timberkey%20%7C%7C%20pass%20%3D%3D%20mtimberkey%29%7B%0A%09%09%09%09%09%09%09%09if%28thearray%5Bx%5D.includes%28%22timber%22%29%29%7B%0A%09%09%09%09%09%09%09%09%09timberarr%20%3D%20timberarr.concat%28thearray%5Bx%5D%29%3B%0A%09%09%09%09%09%09%09%09%09checked%20%3D%20%22True%22%3B%0A%09%09%09%09%09%09%09%09%7D%0A%09%09%09%09%09%09%09%7D%0A%09%09%09%09%09%09%09else%20if%28pass%20%3D%3D%20hemkey%20%7C%7C%20pass%20%3D%3D%20mhemkey%29%7B%0A%09%09%09%09%09%09%09%09if%28thearray%5Bx%5D.includes%28%22hem%22%29%29%7B%0A%09%09%09%09%09%09%09%09%09hemarr%20%3D%20hemarr.concat%28thearray%5Bx%5D%29%3B%0A%09%09%09%09%09%09%09%09%09checked%20%3D%20%22True%22%3B%0A%09%09%09%09%09%09%09%09%7D%0A%09%09%09%09%09%09%09%7D%0A%09%09%09%09%09%09%09else%20if%28pass%20%3D%3D%20hollykey%20%7C%7C%20pass%20%3D%3D%20mhollykey%29%7B%0A%09%09%09%09%09%09%09%09if%28thearray%5Bx%5D.includes%28%22holly%22%29%29%7B%0A%09%09%09%09%09%09%09%09%09hollyarr%20%3D%20hollyarr.concat%28thearray%5Bx%5D%29%3B%0A%09%09%09%09%09%09%09%09%09checked%20%3D%20%22True%22%3B%0A%09%09%09%09%09%09%09%09%7D%0A%09%09%09%09%09%09%09%7D%0A%09%09%09%09%09%09%09else%20if%28pass%20%3D%3D%20mulkey%20%7C%7C%20pass%20%3D%3D%20mmulkey%29%7B%0A%09%09%09%09%09%09%09%09if%28thearray%5Bx%5D.includes%28%22mul%22%29%29%7B%0A%09%09%09%09%09%09%09%09%09mularr%20%3D%20mularr.concat%28thearray%5Bx%5D%29%3B%0A%09%09%09%09%09%09%09%09%09checked%20%3D%20%22True%22%3B%0A%09%09%09%09%09%09%09%09%7D%0A%09%09%09%09%09%09%09%7D%0A%09%09%09%09%09%09%09else%20if%28pass%20%3D%3D%20primkey%20%7C%7C%20pass%20%3D%3D%20mprimkey%29%7B%0A%09%09%09%09%09%09%09%09if%28thearray%5Bx%5D.includes%28%22prim%22%29%29%7B%0A%09%09%09%09%09%09%09%09%09primarr%20%3D%20primarr.concat%28thearray%5Bx%5D%29%3B%0A%09%09%09%09%09%09%09%09%09checked%20%3D%20%22True%22%3B%0A%09%09%09%09%09%09%09%09%7D%0A%09%09%09%09%09%09%09%7D%0A%09%09%09%09%09%09%09x++%3B%0A%09%09%09%09%09%09%7D%0A%09%09%09%09%09%09//show%20comm%20alerts%0A%09%09%09%09%09%09if%20%28pass%20%3D%3D%20onetenkey%20%7C%7C%20pass%20%3D%3D%20monetenkey%29%7B%0A%09%09%09%09%09%09%09temparr%20%3D%20onetenarr%5Bonetenarr.length%20-%201%5D.split%28%27%2C%27%29%3B%09%0A%09%09%09%09%09%09%7D%0A%09%09%09%09%09%09else%20if%20%28pass%20%3D%3D%20onetwelvekey%20%7C%7C%20pass%20%3D%3D%20monetwelvekey%29%7B%0A%09%09%09%09%09%09%09temparr%20%3D%20onetwelvearr%5Bonetwelvearr.length%20-%201%5D.split%28%27%2C%27%29%3B%09%0A%09%09%09%09%09%09%7D%0A%09%09%09%09%09%09else%20if%20%28pass%20%3D%3D%20onefourteenkey%20%7C%7C%20pass%20%3D%3D%20monefourteenkey%29%7B%0A%09%09%09%09%09%09%09temparr%20%3D%20onefourteenarr%5Bonefourteenarr.length%20-%201%5D.split%28%27%2C%27%29%3B%09%0A%09%09%09%09%09%09%7D%0A%09%09%09%09%09%09else%20if%20%28pass%20%3D%3D%20onesixteenkey%20%7C%7C%20pass%20%3D%3D%20monesixteenkey%29%7B%0A%09%09%09%09%09%09%09temparr%20%3D%20onesixteenarr%5Bonesixteenarr.length%20-%201%5D.split%28%27%2C%27%29%3B%09%0A%09%09%09%09%09%09%7D%0A%09%09%09%09%09%09else%20if%20%28pass%20%3D%3D%20timberkey%20%7C%7C%20pass%20%3D%3D%20mtimberkey%29%7B%0A%09%09%09%09%09%09%09temparr%20%3D%20timberarr%5Btimberarr.length%20-%201%5D.split%28%27%2C%27%29%3B%09%0A%09%09%09%09%09%09%7D%0A%09%09%09%09%09%09else%20if%20%28pass%20%3D%3D%20hemkey%20%7C%7C%20pass%20%3D%3D%20mhemkey%29%7B%0A%09%09%09%09%09%09%09temparr%20%3D%20hemarr%5Bhemarr.length%20-%201%5D.split%28%27%2C%27%29%3B%09%0A%09%09%09%09%09%09%7D%0A%09%09%09%09%09%09else%20if%20%28pass%20%3D%3D%20hollykey%20%7C%7C%20pass%20%3D%3D%20mhollykey%29%7B%0A%09%09%09%09%09%09%09temparr%20%3D%20hollyarr%5Bhollyarr.length%20-%201%5D.split%28%27%2C%27%29%3B%09%0A%09%09%09%09%09%09%7D%0A%09%09%09%09%09%09else%20if%20%28pass%20%3D%3D%20mulkey%20%7C%7C%20pass%20%3D%3D%20mmulkey%29%7B%0A%09%09%09%09%09%09%09temparr%20%3D%20mularr%5Bmularr.length%20-%201%5D.split%28%27%2C%27%29%3B%09%0A%09%09%09%09%09%09%7D%0A%09%09%09%09%09%09else%20if%20%28pass%20%3D%3D%20primkey%20%7C%7C%20pass%20%3D%3D%20mprimkey%29%7B%0A%09%09%09%09%09%09%09temparr%20%3D%20primarr%5Bprimarr.length%20-%201%5D.split%28%27%2C%27%29%3B%09%0A%09%09%09%09%09%09%7D%0A%09%09%09%09%09%09//house%0A%09%09%09%09%09%09if%28temparr%5B2%5D.replace%28%27%22%27%2C%27%27%29.replace%28%27%22%27%2C%27%27%29.replace%28%22%5B%22%2C%22%22%29.replace%28%22%5B%22%2C%22%22%29.replace%28%22%5D%22%2C%22%22%29.replace%28%22%5D%22%2C%22%22%29%20%21%3D%20%22%22%20%26%26%20temparr%5B2%5D.replace%28%27%22%27%2C%27%27%29.replace%28%27%22%27%2C%27%27%29.replace%28%22%5B%22%2C%22%22%29.replace%28%22%5B%22%2C%22%22%29.replace%28%22%5D%22%2C%22%22%29.replace%28%22%5D%22%2C%22%22%29%20%21%3D%20%22na%22%29%7B%0A%09%09%09%09%09%09%09tempstr%20%3D%20%22Important%20House%20Communication%3A%20%22%20+%20temparr%5B2%5D.replace%28%27%22%27%2C%27%27%29.replace%28%27%22%27%2C%27%27%29.replace%28%22%5B%22%2C%22%22%29.replace%28%22%5B%22%2C%22%22%29.replace%28%22%5D%22%2C%22%22%29.replace%28%22%5D%22%2C%22%22%29%3B%0A%09%09%09%09%09%09%09document.getElementById%28%27important-comms-house%27%29.textContent%20%3D%20tempstr%3B%0A%09%09%09%09%09%09%7D%0A%09%09%09%09%09%7D%0A%09%09%09%09%7D%0A%09%09%09%7D%3B%0A%09%09%09setInterval%28importantcomms%2C%203000%29%3B%0A%09%09%7D%0A%09%09else%7B%0A%09%09%09window.alert%28%22Incorrect%20Password%21%22%29%3B%0A%09%09%7D%0A%09%7D%0A%09function%20frms%28frms%29%7B%0A%09%09if%28frms%20%3D%3D%20%27timeclock%27%29%7B%0A%09%09%09window.open%28%22https%3A//docs.google.com/forms/d/e/1FAIpQLSfT43EQMQche4iS0Lv3k0N7uqymf8Bu5lunH2TNQ8RwMaHpsA/viewform%3Fusp%3Dsf_link%22%29%0A%09%09%7D%0A%09%09else%20if%28frms%20%3D%3D%20%22qa%22%29%7B%0A%09%09%09window.open%28%22https%3A//docs.google.com/forms/d/e/1FAIpQLSdoUEnqF03PugHPon_tKzcNh23aJ5xEyrhHTB_Pv_qOv4JPyA/viewform%22%29%3B%0A%09%09%7D%0A%09%09else%20if%28frms%20%3D%3D%20%27behaviors%27%29%7B%0A%09%09%09//TODO%0A%09%09%09window.open%28%22%22%29%0A%09%09%09alert%28%27behaviors%20clicked%27%29%0A%09%09%7D%0A%09%09else%20if%28frms%20%3D%3D%20%27communications%27%29%7B%0A%09%09%09if%28pass%20%3D%3D%20onetenkey%20%7C%7C%20pass%20%3D%3D%20monetenkey%29%7B%09%0A%09%09%09%09if%28pass%20%3D%3D%20onetenkey%29%7B%0A%09%09%09%09%09let%20option%20%3D%20window.prompt%28%221%29%20Submit%20new%20communication.%202%29%20View%20communications.%22%2C%22%22%29%0A%09%09%09%09%09if%28option%20%3D%3D%20%221%22%29%7B%0A%09%09%09%09%09%09window.open%28%22https%3A//docs.google.com/forms/d/e/1FAIpQLSfgwCIhvNudSK51NhK01PeMyK8AeeT0sGGQD_qIzcun-uyL3w/viewform%3Fusp%3Dsf_link%22%29%3B%0A%09%09%09%09%09%7D%0A%09%09%09%09%09else%20if%28option%20%3D%3D%20%222%22%29%7B%0A%09%09%09%09%09%09window.open%28%22https%3A//docs.google.com/spreadsheets/d/1BgsbeKTfj2c3acuQi4A3SCe3ZyG-UPZXwfFbT1CXZmw/edit%3Fusp%3Dsharing%22%29%3B%0A%09%09%09%09%09%7D%0A%09%09%09%09%09else%20%7B%0A%09%09%09%09%09%09alert%28%27Invalid%20Input%27%29%3B%0A%09%09%09%09%09%7D%0A%09%09%09%09%7D%0A%09%09%09%09else%20if%28pass%20%3D%3D%20monetenkey%29%7B%0A%09%09%09%09%09let%20option%20%3D%20window.prompt%28%221%29%20Submit%20new%20communication.%202%29%20View%20communications.%203%29%20Submit%20Important%20Communication%22%2C%22%22%29%0A%09%09%09%09%09if%28option%20%3D%3D%20%221%22%29%7B%0A%09%09%09%09%09%09window.open%28%22https%3A//docs.google.com/forms/d/e/1FAIpQLSfgwCIhvNudSK51NhK01PeMyK8AeeT0sGGQD_qIzcun-uyL3w/viewform%3Fusp%3Dsf_link%22%29%3B%0A%09%09%09%09%09%7D%0A%09%09%09%09%09else%20if%28option%20%3D%3D%20%222%22%29%7B%0A%09%09%09%09%09%09window.open%28%22https%3A//docs.google.com/spreadsheets/d/1BgsbeKTfj2c3acuQi4A3SCe3ZyG-UPZXwfFbT1CXZmw/edit%3Fusp%3Dsharing%22%29%3B%0A%09%09%09%09%09%7D%0A%09%09%09%09%09else%20if%28option%20%3D%3D%20%223%22%20%26%26%20pass%20%3D%3D%20monetenkey%29%7B%0A%09%09%09%09%09%09window.open%28%22https%3A//docs.google.com/forms/d/e/1FAIpQLSd9yqqNefQPKL3SEe5BSoqfpqOX8o7cA_0DLdPs_BYCX37tvw/viewform%22%29%3B%0A%09%09%09%09%09%7D%0A%09%09%09%09%09else%20%7B%0A%09%09%09%09%09%09alert%28%27Invalid%20Input%27%29%3B%0A%09%09%09%09%09%7D%0A%09%09%09%09%7D%0A%09%09%09%7D%0A%09%09%09else%20if%28pass%20%3D%3D%20onetwelvekey%20%7C%7C%20pass%20%3D%3D%20monetwelvekey%29%7B%09%0A%09%09%09%09if%20%28pass%20%3D%3D%20onetwelvekey%29%7B%0A%09%09%09%09%09let%20option%20%3D%20window.prompt%28%221%29%20Submit%20new%20communication.%202%29%20View%20communications.%22%2C%22%22%29%0A%09%09%09%09%09if%28option%20%3D%3D%20%221%22%29%7B%0A%09%09%09%09%09%09window.open%28%22https%3A//docs.google.com/forms/d/1sToWpWyRyz5_myLaFpjSfMZefGBEeMMREPDsaMsSjd0/edit%22%29%3B%0A%09%09%09%09%09%7D%0A%09%09%09%09%09else%20if%28option%20%3D%3D%20%222%22%29%7B%0A%09%09%09%09%09%09window.open%28%22https%3A//docs.google.com/spreadsheets/d/1CTmkKVePA7LsoNliGGvC8NTYm164OmYaPRPTFLXJefw/edit%3Fresourcekey%23gid%3D88238199%22%29%3B%0A%09%09%09%09%09%7D%0A%09%09%09%09%09else%20%7B%0A%09%09%09%09%09%09alert%28%27Invalid%20Input%27%29%3B%0A%09%09%09%09%09%7D%0A%09%09%09%09%7D%0A%09%09%09%09else%20if%20%28pass%20%3D%3D%20monetwelvekey%29%7B%0A%09%09%09%09%09let%20option%20%3D%20window.prompt%28%221%29%20Submit%20new%20communication.%202%29%20View%20communications.%203%29%20Submit%20Important%20Communication%22%2C%22%22%29%0A%09%09%09%09%09if%28option%20%3D%3D%20%221%22%29%7B%0A%09%09%09%09%09%09window.open%28%22https%3A//docs.google.com/forms/d/1sToWpWyRyz5_myLaFpjSfMZefGBEeMMREPDsaMsSjd0/edit%22%29%3B%0A%09%09%09%09%09%7D%0A%09%09%09%09%09else%20if%28option%20%3D%3D%20%222%22%29%7B%0A%09%09%09%09%09%09window.open%28%22https%3A//docs.google.com/spreadsheets/d/1CTmkKVePA7LsoNliGGvC8NTYm164OmYaPRPTFLXJefw/edit%3Fresourcekey%23gid%3D88238199%22%29%3B%0A%09%09%09%09%09%7D%0A%09%09%09%09%09else%20if%28option%20%3D%3D%20%223%22%29%7B%0A%09%09%09%09%09%09window.open%28%22https%3A//docs.google.com/forms/d/e/1FAIpQLSd9yqqNefQPKL3SEe5BSoqfpqOX8o7cA_0DLdPs_BYCX37tvw/viewform%22%29%3B%0A%09%09%09%09%09%7D%0A%09%09%09%09%09else%20%7B%0A%09%09%09%09%09%09alert%28%27Invalid%20Input%27%29%3B%0A%09%09%09%09%09%7D%0A%09%09%09%09%7D%0A%09%09%09%7D%0A%09%09%09else%20if%28pass%20%3D%3D%20onefourteenkey%20%7C%7C%20pass%20%3D%3D%20monefourteenkey%29%7B%09%0A%09%09%09%09if%28pass%20%3D%3D%20onefourteenkey%29%7B%0A%09%09%09%09%09let%20option%20%3D%20window.prompt%28%221%29%20Submit%20new%20communication.%202%29%20View%20communications.%22%2C%22%22%29%0A%09%09%09%09%09if%28option%20%3D%3D%20%221%22%29%7B%0A%09%09%09%09%09%09window.open%28%22https%3A//docs.google.com/forms/d/1U3rWYcoLv84D0hQDjIwdMW-UYvbRyAAFeRvDb9xrhzQ/edit%22%29%3B%0A%09%09%09%09%09%7D%0A%09%09%09%09%09else%20if%28option%20%3D%3D%20%222%22%29%7B%0A%09%09%09%09%09%09window.open%28%22https%3A//docs.google.com/spreadsheets/d/1UKWXaI0Rsz7-uY2eNvErJa8e5hKRN2Z0dOTeIixF_0E/edit%3Fresourcekey%23gid%3D1010212790%22%29%3B%0A%09%09%09%09%09%7D%0A%09%09%09%09%09else%20%7B%0A%09%09%09%09%09%09alert%28%27Invalid%20Input%27%29%3B%0A%09%09%09%09%09%7D%0A%09%09%09%09%7D%0A%09%09%09%09else%20if%28pass%20%3D%3D%20monefourteenkey%29%7B%0A%09%09%09%09%09let%20option%20%3D%20window.prompt%28%221%29%20Submit%20new%20communication.%202%29%20View%20communications.%203%29%20Submit%20Important%20Communication%22%2C%22%22%29%0A%09%09%09%09%09if%28option%20%3D%3D%20%221%22%29%7B%0A%09%09%09%09%09%09window.open%28%22https%3A//docs.google.com/forms/d/1U3rWYcoLv84D0hQDjIwdMW-UYvbRyAAFeRvDb9xrhzQ/edit%22%29%3B%0A%09%09%09%09%09%7D%0A%09%09%09%09%09else%20if%28option%20%3D%3D%20%222%22%29%7B%0A%09%09%09%09%09%09window.open%28%22https%3A//docs.google.com/spreadsheets/d/1UKWXaI0Rsz7-uY2eNvErJa8e5hKRN2Z0dOTeIixF_0E/edit%3Fresourcekey%23gid%3D1010212790%22%29%3B%0A%09%09%09%09%09%7D%0A%09%09%09%09%09else%20if%28option%20%3D%3D%20%223%22%29%7B%0A%09%09%09%09%09%09window.open%28%22https%3A//docs.google.com/forms/d/e/1FAIpQLSd9yqqNefQPKL3SEe5BSoqfpqOX8o7cA_0DLdPs_BYCX37tvw/viewform%22%29%3B%0A%09%09%09%09%09%7D%0A%09%09%09%09%09else%20%7B%0A%09%09%09%09%09%09alert%28%27Invalid%20Input%27%29%3B%0A%09%09%09%09%09%7D%0A%09%09%09%09%7D%0A%09%09%09%7D%0A%09%09%09else%20if%28pass%20%3D%3D%20onesixteenkey%20%7C%7C%20pass%20%3D%3D%20monesixteenkey%29%7B%09%0A%09%09%09%09if%28pass%20%3D%3D%20onesixteenkey%29%7B%0A%09%09%09%09%09let%20option%20%3D%20window.prompt%28%221%29%20Submit%20new%20communication.%202%29%20View%20communications.%22%2C%22%22%29%0A%09%09%09%09%09if%28option%20%3D%3D%20%221%22%29%7B%0A%09%09%09%09%09%09window.open%28%22https%3A//docs.google.com/forms/d/123fgyVY5DUC2T-xX9kkQYHdExC6g7VAm7o77ddsd1cc/edit%22%29%3B%0A%09%09%09%09%09%7D%0A%09%09%09%09%09else%20if%28option%20%3D%3D%20%222%22%29%7B%0A%09%09%09%09%09%09window.open%28%22https%3A//docs.google.com/spreadsheets/d/1gQeL9ts9o4GEoGuKIu5gSEkoZdgimF-gFUCZulQjkqU/edit%3Fresourcekey%23gid%3D1624329812%22%29%3B%0A%09%09%09%09%09%7D%0A%09%09%09%09%09else%20%7B%0A%09%09%09%09%09%09alert%28%27Invalid%20Input%27%29%3B%0A%09%09%09%09%09%7D%0A%09%09%09%09%7D%0A%09%09%09%09else%20if%28pass%20%3D%3D%20monesixteenkey%29%7B%0A%09%09%09%09%09let%20option%20%3D%20window.prompt%28%221%29%20Submit%20new%20communication.%202%29%20View%20communications.%203%29%20Submit%20Important%20Communication%22%2C%22%22%29%0A%09%09%09%09%09if%28option%20%3D%3D%20%221%22%29%7B%0A%09%09%09%09%09%09window.open%28%22https%3A//docs.google.com/forms/d/123fgyVY5DUC2T-xX9kkQYHdExC6g7VAm7o77ddsd1cc/edit%22%29%3B%0A%09%09%09%09%09%7D%0A%09%09%09%09%09else%20if%28option%20%3D%3D%20%222%22%29%7B%0A%09%09%09%09%09%09window.open%28%22https%3A//docs.google.com/spreadsheets/d/1gQeL9ts9o4GEoGuKIu5gSEkoZdgimF-gFUCZulQjkqU/edit%3Fresourcekey%23gid%3D1624329812%22%29%3B%0A%09%09%09%09%09%7D%0A%09%09%09%09%09else%20if%28option%20%3D%3D%20%223%22%29%7B%0A%09%09%09%09%09%09window.open%28%22https%3A//docs.google.com/forms/d/e/1FAIpQLSd9yqqNefQPKL3SEe5BSoqfpqOX8o7cA_0DLdPs_BYCX37tvw/viewform%22%29%3B%0A%09%09%09%09%09%7D%0A%09%09%09%09%09else%20%7B%0A%09%09%09%09%09%09alert%28%27Invalid%20Input%27%29%3B%0A%09%09%09%09%09%7D%0A%09%09%09%09%7D%0A%09%09%09%7D%0A%09%09%09else%20if%28pass%20%3D%3D%20timberkey%20%7C%7C%20pass%20%3D%3D%20mtimberkey%29%7B%09%0A%09%09%09%09if%28pass%20%3D%3D%20timberkey%29%7B%0A%09%09%09%09%09let%20option%20%3D%20window.prompt%28%221%29%20Submit%20new%20communication.%202%29%20View%20communications.%22%2C%22%22%29%0A%09%09%09%09%09if%28option%20%3D%3D%20%221%22%29%7B%0A%09%09%09%09%09%09window.open%28%22https%3A//docs.google.com/forms/d/19IoW3zRFInirxx9vuKHEwGdMoWCXLHClJAuPm79S_Po/edit%22%29%3B%0A%09%09%09%09%09%7D%0A%09%09%09%09%09else%20if%28option%20%3D%3D%20%222%22%29%7B%0A%09%09%09%09%09%09window.open%28%22https%3A//docs.google.com/spreadsheets/d/1mw6PTV38fZrbiLLT1T9hvoj-NqCswcaVJ7KDsbr_1Lw/edit%3Fresourcekey%23gid%3D618975353%22%29%3B%0A%09%09%09%09%09%7D%0A%09%09%09%09%09else%20%7B%0A%09%09%09%09%09%09alert%28%27Invalid%20Input%27%29%3B%0A%09%09%09%09%09%7D%0A%09%09%09%09%7D%0A%09%09%09%09else%20if%28pass%20%3D%3D%20mtimberkey%29%7B%0A%09%09%09%09%09let%20option%20%3D%20window.prompt%28%221%29%20Submit%20new%20communication.%202%29%20View%20communications.%203%29%20Submit%20Important%20Communication%22%2C%22%22%29%0A%09%09%09%09%09if%28option%20%3D%3D%20%221%22%29%7B%0A%09%09%09%09%09%09window.open%28%22https%3A//docs.google.com/forms/d/19IoW3zRFInirxx9vuKHEwGdMoWCXLHClJAuPm79S_Po/edit%22%29%3B%0A%09%09%09%09%09%7D%0A%09%09%09%09%09else%20if%28option%20%3D%3D%20%222%22%29%7B%0A%09%09%09%09%09%09window.open%28%22https%3A//docs.google.com/spreadsheets/d/1mw6PTV38fZrbiLLT1T9hvoj-NqCswcaVJ7KDsbr_1Lw/edit%3Fresourcekey%23gid%3D618975353%22%29%3B%0A%09%09%09%09%09%7D%0A%09%09%09%09%09else%20if%28option%20%3D%3D%20%223%22%29%7B%0A%09%09%09%09%09%09window.open%28%22https%3A//docs.google.com/forms/d/e/1FAIpQLSd9yqqNefQPKL3SEe5BSoqfpqOX8o7cA_0DLdPs_BYCX37tvw/viewform%22%29%3B%0A%09%09%09%09%09%7D%0A%09%09%09%09%09else%20%7B%0A%09%09%09%09%09%09alert%28%27Invalid%20Input%27%29%3B%0A%09%09%09%09%09%7D%0A%09%09%09%09%7D%0A%09%09%09%7D%0A%09%09%09else%20if%28pass%20%3D%3D%20hemkey%20%7C%7C%20pass%20%3D%3D%20mhemkey%29%7B%09%0A%09%09%09%09if%28pass%20%3D%3D%20hemkey%29%7B%0A%09%09%09%09%09let%20option%20%3D%20window.prompt%28%221%29%20Submit%20new%20communication.%202%29%20View%20communications.%22%2C%22%22%29%0A%09%09%09%09%09if%28option%20%3D%3D%20%221%22%29%7B%0A%09%09%09%09%09%09window.open%28%22https%3A//docs.google.com/forms/d/1w_fpJONKT5jqa_uwyH5F2R10LqHFsumCgrfTk43Z9l4/edit%22%29%3B%0A%09%09%09%09%09%7D%0A%09%09%09%09%09else%20if%28option%20%3D%3D%20%222%22%29%7B%0A%09%09%09%09%09%09window.open%28%22https%3A//docs.google.com/spreadsheets/d/1_dh5GtsEm_z5sg4RJCSAp-MclHGtii1n0b3R5fCM3a0/edit%3Fresourcekey%23gid%3D827042750%22%29%3B%0A%09%09%09%09%09%7D%0A%09%09%09%09%09else%20%7B%0A%09%09%09%09%09%09alert%28%27Invalid%20Input%27%29%3B%0A%09%09%09%09%09%7D%0A%09%09%09%09%7D%0A%09%09%09%09else%20if%28pass%20%3D%3D%20mhemkey%29%7B%0A%09%09%09%09%09let%20option%20%3D%20window.prompt%28%221%29%20Submit%20new%20communication.%202%29%20View%20communications.%203%29%20Submit%20Important%20Communication%22%2C%22%22%29%0A%09%09%09%09%09if%28option%20%3D%3D%20%221%22%29%7B%0A%09%09%09%09%09%09window.open%28%22https%3A//docs.google.com/forms/d/1w_fpJONKT5jqa_uwyH5F2R10LqHFsumCgrfTk43Z9l4/edit%22%29%3B%0A%09%09%09%09%09%7D%0A%09%09%09%09%09else%20if%28option%20%3D%3D%20%222%22%29%7B%0A%09%09%09%09%09%09window.open%28%22https%3A//docs.google.com/spreadsheets/d/1_dh5GtsEm_z5sg4RJCSAp-MclHGtii1n0b3R5fCM3a0/edit%3Fresourcekey%23gid%3D827042750%22%29%3B%0A%09%09%09%09%09%7D%0A%09%09%09%09%09else%20if%28option%20%3D%3D%20%223%22%29%7B%0A%09%09%09%09%09%09window.open%28%22https%3A//docs.google.com/forms/d/e/1FAIpQLSd9yqqNefQPKL3SEe5BSoqfpqOX8o7cA_0DLdPs_BYCX37tvw/viewform%22%29%3B%0A%09%09%09%09%09%7D%0A%09%09%09%09%09else%20%7B%0A%09%09%09%09%09%09alert%28%27Invalid%20Input%27%29%3B%0A%09%09%09%09%09%7D%0A%09%09%09%09%7D%0A%09%09%09%7D%0A%09%09%09else%20if%28pass%20%3D%3D%20hollykey%20%7C%7C%20pass%20%3D%3D%20mhollykey%29%7B%09%0A%09%09%09%09if%28pass%20%3D%3D%20hollykey%29%7B%0A%09%09%09%09%09let%20option%20%3D%20window.prompt%28%221%29%20Submit%20new%20communication.%202%29%20View%20communications.%22%2C%22%22%29%0A%09%09%09%09%09if%28option%20%3D%3D%20%221%22%29%7B%0A%09%09%09%09%09%09window.open%28%22https%3A//docs.google.com/forms/d/18VMldUZ33w_rGaYoVLBCPWmXPgda0ncIy5PozNL90KQ/edit%22%29%3B%0A%09%09%09%09%09%7D%0A%09%09%09%09%09else%20if%28option%20%3D%3D%20%222%22%29%7B%0A%09%09%09%09%09%09window.open%28%22https%3A//docs.google.com/spreadsheets/d/1PX-dtzj67vj7MVaOUDBtMuyGyLboNwU4xYfqf5BdwPI/edit%3Fresourcekey%23gid%3D904690958%22%29%3B%0A%09%09%09%09%09%7D%0A%09%09%09%09%09else%20%7B%0A%09%09%09%09%09%09alert%28%27Invalid%20Input%27%29%3B%0A%09%09%09%09%09%7D%0A%09%09%09%09%7D%0A%09%09%09%09else%20if%28pass%20%3D%3D%20mhollykey%29%7B%0A%09%09%09%09%09let%20option%20%3D%20window.prompt%28%221%29%20Submit%20new%20communication.%202%29%20View%20communications.%203%29%20Submit%20Important%20Communication%22%2C%22%22%29%0A%09%09%09%09%09if%28option%20%3D%3D%20%221%22%29%7B%0A%09%09%09%09%09%09window.open%28%22https%3A//docs.google.com/forms/d/18VMldUZ33w_rGaYoVLBCPWmXPgda0ncIy5PozNL90KQ/edit%22%29%3B%0A%09%09%09%09%09%7D%0A%09%09%09%09%09else%20if%28option%20%3D%3D%20%222%22%29%7B%0A%09%09%09%09%09%09window.open%28%22https%3A//docs.google.com/spreadsheets/d/1PX-dtzj67vj7MVaOUDBtMuyGyLboNwU4xYfqf5BdwPI/edit%3Fresourcekey%23gid%3D904690958%22%29%3B%0A%09%09%09%09%09%7D%0A%09%09%09%09%09else%20if%28option%20%3D%3D%20%223%22%29%7B%0A%09%09%09%09%09%09window.open%28%22https%3A//docs.google.com/forms/d/e/1FAIpQLSd9yqqNefQPKL3SEe5BSoqfpqOX8o7cA_0DLdPs_BYCX37tvw/viewform%22%29%3B%0A%09%09%09%09%09%7D%0A%09%09%09%09%09else%20%7B%0A%09%09%09%09%09%09alert%28%27Invalid%20Input%27%29%3B%0A%09%09%09%09%09%7D%0A%09%09%09%09%7D%0A%09%09%09%7D%0A%09%09%09else%20if%28pass%20%3D%3D%20mulkey%20%7C%7C%20pass%20%3D%3D%20mmulkey%29%7B%09%0A%09%09%09%09if%28pass%20%3D%3D%20mulkey%29%7B%0A%09%09%09%09%09let%20option%20%3D%20window.prompt%28%221%29%20Submit%20new%20communication.%202%29%20View%20communications.%22%2C%22%22%29%0A%09%09%09%09%09if%28option%20%3D%3D%20%221%22%29%7B%0A%09%09%09%09%09%09window.open%28%22https%3A//docs.google.com/forms/d/1WVAFHnUc8U0K1w35LelVpEKgUvSY-khmz3ixCcwmxcI/edit%23responses%22%29%3B%0A%09%09%09%09%09%7D%0A%09%09%09%09%09else%20if%28option%20%3D%3D%20%222%22%29%7B%0A%09%09%09%09%09%09window.open%28%22https%3A//docs.google.com/spreadsheets/d/13NJCjgo8kGMZJaPMnMKNjduPXggjQin_BWW8kiaPa3E/edit%3Fresourcekey%23gid%3D1408610920%22%29%3B%0A%09%09%09%09%09%7D%0A%09%09%09%09%09else%20%7B%0A%09%09%09%09%09%09alert%28%27Invalid%20Input%27%29%3B%0A%09%09%09%09%09%7D%0A%09%09%09%09%7D%0A%09%09%09%09else%20if%28pass%20%3D%3D%20mmulkey%29%7B%0A%09%09%09%09%09let%20option%20%3D%20window.prompt%28%221%29%20Submit%20new%20communication.%202%29%20View%20communications.%203%29%20Submit%20Important%20Communication%22%2C%22%22%29%0A%09%09%09%09%09if%28option%20%3D%3D%20%221%22%29%7B%0A%09%09%09%09%09%09window.open%28%22https%3A//docs.google.com/forms/d/1WVAFHnUc8U0K1w35LelVpEKgUvSY-khmz3ixCcwmxcI/edit%23responses%22%29%3B%0A%09%09%09%09%09%7D%0A%09%09%09%09%09else%20if%28option%20%3D%3D%20%222%22%29%7B%0A%09%09%09%09%09%09window.open%28%22https%3A//docs.google.com/spreadsheets/d/13NJCjgo8kGMZJaPMnMKNjduPXggjQin_BWW8kiaPa3E/edit%3Fresourcekey%23gid%3D1408610920%22%29%3B%0A%09%09%09%09%09%7D%0A%09%09%09%09%09else%20if%28option%20%3D%3D%20%223%22%29%7B%0A%09%09%09%09%09%09window.open%28%22https%3A//docs.google.com/forms/d/e/1FAIpQLSd9yqqNefQPKL3SEe5BSoqfpqOX8o7cA_0DLdPs_BYCX37tvw/viewform%22%29%3B%0A%09%09%09%09%09%7D%0A%09%09%09%09%09else%20%7B%0A%09%09%09%09%09%09alert%28%27Invalid%20Input%27%29%3B%0A%09%09%09%09%09%7D%0A%09%09%09%09%7D%0A%09%09%09%7D%0A%09%09%09else%20if%28pass%20%3D%3D%20primkey%20%7C%7C%20pass%20%3D%3D%20mprimkey%29%7B%09%0A%09%09%09%09if%28pass%20%3D%3D%20primkey%29%7B%0A%09%09%09%09let%20option%20%3D%20window.prompt%28%221%29%20Submit%20new%20communication.%202%29%20View%20communications.%22%2C%22%22%29%0A%09%09%09%09%09if%28option%20%3D%3D%20%221%22%29%7B%0A%09%09%09%09%09%09window.open%28%22https%3A//docs.google.com/forms/d/1dg_COdmb-Ac7xu7ZXh457adReIaFoSdfkrJJhilY6sI/edit%22%29%3B%0A%09%09%09%09%09%7D%0A%09%09%09%09%09else%20if%28option%20%3D%3D%20%222%22%29%7B%0A%09%09%09%09%09%09window.open%28%22https%3A//docs.google.com/spreadsheets/d/1T-ECKEziiHZWDBggVjs-Qcvzw1ODCXDvS9gBxtRc7zU/edit%3Fresourcekey%23gid%3D496797329%22%29%3B%0A%09%09%09%09%09%7D%0A%09%09%09%09%09else%20%7B%0A%09%09%09%09%09%09alert%28%27Invalid%20Input%27%29%3B%0A%09%09%09%09%09%7D%0A%09%09%09%09%7D%0A%09%09%09%09else%20if%28pass%20%3D%3D%20mprimkey%29%7B%0A%09%09%09%09%09let%20option%20%3D%20window.prompt%28%221%29%20Submit%20new%20communication.%202%29%20View%20communications.%203%29%20Submit%20Important%20Communication%22%2C%22%22%29%0A%09%09%09%09%09if%28option%20%3D%3D%20%221%22%29%7B%0A%09%09%09%09%09%09window.open%28%22https%3A//docs.google.com/forms/d/1dg_COdmb-Ac7xu7ZXh457adReIaFoSdfkrJJhilY6sI/edit%22%29%3B%0A%09%09%09%09%09%7D%0A%09%09%09%09%09else%20if%28option%20%3D%3D%20%222%22%29%7B%0A%09%09%09%09%09%09window.open%28%22https%3A//docs.google.com/spreadsheets/d/1T-ECKEziiHZWDBggVjs-Qcvzw1ODCXDvS9gBxtRc7zU/edit%3Fresourcekey%23gid%3D496797329%22%29%3B%0A%09%09%09%09%09%7D%0A%09%09%09%09%09else%20if%28option%20%3D%3D%20%223%22%29%7B%0A%09%09%09%09%09%09window.open%28%22https%3A//docs.google.com/forms/d/e/1FAIpQLSd9yqqNefQPKL3SEe5BSoqfpqOX8o7cA_0DLdPs_BYCX37tvw/viewform%22%29%3B%0A%09%09%09%09%09%7D%0A%09%09%09%09%09else%20%7B%0A%09%09%09%09%09%09alert%28%27Invalid%20Input%27%29%3B%0A%09%09%09%09%09%7D%0A%09%09%09%09%7D%0A%09%09%09%7D%0A%09%09%7D%0A%09%09else%20if%28frms%20%3D%3D%20%27daily%27%29%7B%0A%09%09%09if%28pass%20%3D%3D%20onetenkey%29%7B%0A%09%09%09%09let%20option%20%3D%20window.prompt%28%221%29%20Submit%20new%20communication.%202%29%20View%20communications%22%2C%22%22%29%0A%09%09%09%09if%28option%20%3D%3D%20%221%22%29%7B%0A%09%09%09%09%09window.open%28%22https%3A//docs.google.com/forms/d/e/1FAIpQLSfgwCIhvNudSK51NhK01PeMyK8AeeT0sGGQD_qIzcun-uyL3w/viewform%3Fusp%3Dsf_link%22%29%3B%0A%09%09%09%09%7D%0A%09%09%09%09else%20if%28option%20%3D%3D%20%222%22%29%7B%0A%09%09%09%09%09window.open%28%22https%3A//docs.google.com/spreadsheets/d/1BgsbeKTfj2c3acuQi4A3SCe3ZyG-UPZXwfFbT1CXZmw/edit%3Fusp%3Dsharing%22%29%3B%0A%09%09%09%09%7D%0A%09%09%09%7D%0A%09%09%7D%0A%09%09else%20if%28frms%20%3D%3D%20%27pdf%27%29%7B%0A%09%09%09window.open%28%22https%3A//docs.google.com/forms/d/e/1FAIpQLSctu28igUup9L89-yCPJUHujw0kv77TMuI10Fff9LZQvbPZxA/viewform%3Fusp%3Dsf_link%22%29%0A%09%09%7D%0A%09%09else%20if%28frms%20%3D%3D%20%27policies%27%29%7B%0A%09%09%09window.open%28%22https%3A//docs.google.com/document/d/1PB2mUZGqUUPPxRa4yelt-pAe60BOMxQtf2R53Vf-E88/edit%3Fusp%3Dsharing%22%29%0A%09%09%7D%0A%09%7D%0A%20%20%20%20%3C/script%3E%0A%0A%3C/head%3E%0A%0A%3Cbody%3E%0A%09%3Cp%20id%3D%27testing%27%20style%3D%22display%3A%20none%22%3E%3C/p%3E%0A%09%3Cp%20id%3D%27important-comms-house%27%20style%3D%22padding-left%3A%202.5%25%22%3E%3C/p%3E%0A%20%20%20%20%3C%21--%20Loader%20--%3E%0A%20%20%20%20%3Cdiv%20id%3D%22loader-wrapper%22%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20id%3D%22loader%22%3E%3C/div%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22loader-section%20section-left%22%3E%3C/div%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22loader-section%20section-right%22%3E%3C/div%3E%0A%20%20%20%20%3C/div%3E%0A%20%20%20%20%3Cdiv%20class%3D%22container%22%3E%0A%20%20%20%20%20%20%20%20%3Csection%20class%3D%22tm-section-head%22%20id%3D%22top%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cheader%20id%3D%22header%22%20class%3D%22text-center%20tm-text-gray%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ch1%3EFuture%20Care%20LLC%3C/h1%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cp%3EWhere%20We%20Care%20About%20Your%20Future%3C/p%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3C/header%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cnav%20class%3D%22navbar%20narbar-light%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ca%20class%3D%22navbar-brand%20tm-text-gray%22%20href%3D%22%23%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20Menu%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/a%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cbutton%20type%3D%22button%22%20id%3D%22nav-toggle%22%20class%3D%22navbar-toggler%20collapsed%22%20data-toggle%3D%22collapse%22%20data-target%3D%22%23mainNav%22%20aria-expanded%3D%22false%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20aria-label%3D%22Toggle%20navigation%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cspan%20class%3D%22navbar-toggler-icon%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ci%20class%3D%22fa%20fa-navicon%20tm-fa-toggler-icon%22%3E%3C/i%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/span%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/button%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20id%3D%22mainNav%22%20class%3D%22collapse%20navbar-collapse%20tm-bg-white%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cul%20class%3D%22navbar-nav%20ml-auto%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%20class%3D%22nav-item%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ca%20class%3D%22nav-link%20tm-text-gray%22%20href%3D%22%23top%22%3EHome%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cspan%20class%3D%22sr-only%22%3E%28current%29%3C/span%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/a%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/li%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%20class%3D%22nav-item%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ca%20class%3D%22nav-link%20tm-text-gray%22%20href%3D%22%23tm-section-2%22%3EInfo%3C/a%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/li%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%20class%3D%22nav-item%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ca%20class%3D%22nav-link%20tm-text-gray%22%20href%3D%22%23tm-section-6%22%3EContact%3C/a%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/li%3E%0A%09%09%09%3Cli%20class%3D%22nav-item%22%3E%0A%09%09%09%09%3Ca%20class%3D%22nav-link%20tm-text-gray%22%20href%3D%22%23tm-section-6%22%20onclick%3D%22employee_password%28%29%22%3EEmployee%20Resources%3C/a%3E%0A%09%09%09%3C/li%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/ul%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3C/nav%3E%0A%09%3Cp%20id%3D%22employee-nav%22%20style%3D%22display%3A%20none%22%3E%0A%09%09%09%3Ca%20style%3D%22padding-right%3A%205%25%22%20class%3D%22tm-text-gray%22%20onclick%3D%22frms%28%27timeclock%27%29%22%3ETime%20Clock%3C/a%3E%0A%09%09%09%3Ca%20style%3D%22padding-right%3A%205%25%22%20class%3D%22tm-text-gray%22%20onclick%3D%22frms%28%27communications%27%29%22%3ECommunications%3C/a%3E%0A%09%09%09%3C%21--%3Ca%20style%3D%22padding-right%3A%205%25%22%20class%3D%22tm-text-gray%22%20onclick%3D%22frms%28%27behaviors%27%29%22%3EBehaviors%3C/a%3E--%3E%0A%09%09%09%3Ca%20style%3D%22padding-right%3A%205%25%22%20class%3D%22tm-text-gray%22%20onclick%3D%22frms%28%27pdf%27%29%22%3EPDF%20Reports%3C/a%3E%0A%09%09%09%3Ca%20style%3D%22padding-right%3A%205%25%22%20class%3D%22tm-text-gray%22%20onclick%3D%22frms%28%27policies%27%29%22%3EPolicies%20%26%20Procedures%3C/a%3E%0A%09%09%09%3Ca%20style%3D%22padding-right%3A%205%25%22%20class%3D%22tm-text-gray%22%20href%3D%22August%202023%20Newsletter.pdf%22%3ENewsletter%3C/a%3E%0A%09%09%09%3Ca%20style%3D%22padding-right%3A%205%25%22%20class%3D%22tm-text-gray%22%20onclick%3D%22frms%28%27qa%27%29%22%3EQ%26A%3C/a%3E%0A%09%3C/p%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22navbar%20navbar-default%20navbar-fixed-top%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ca%20href%3D%22/index.html%22%20class%3D%22navbar-brand%22%3E%3C/a%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cbotton%20class%3D%22navbar-toggle%20collapsed%22%20data-toggle%3D%22collapse%22%20data-target%3D%22%23mydropdown%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cspan%20class%3D%22icon-bar%22%3E%3C/span%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cspan%20class%3D%22icon-bar%22%3E%3C/span%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cspan%20class%3D%22icon-bar%22%3E%3C/span%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/botton%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22collapse%20navbar-collapse%22%20id%3D%22mydropdown%22%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cul%20class%3D%22nav%20navbar-nav%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ca%20href%3D%22%23%22%3EHome%3C/a%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/li%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ca%20href%3D%22%23%22%3Einfo%3C/a%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/li%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ca%20href%3D%22%23%22%3Econtact%3C/a%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/li%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/ul%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%3C/section%3E%0A%0A%20%20%20%20%20%20%20%20%3Csection%20class%3D%22row%22%20id%3D%22tm-section-1%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22col-lg-12%20tm-slider-col%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22tm-img-slider%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22tm-img-slider-item%22%20href%3D%22img/futurecare.JPG%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cimg%20src%3D%22img/futurecare.JPG%22%20alt%3D%22Image%22%20class%3D%22tm-slider-img%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22tm-img-slider-item%22%20href%3D%22img/welcome.JPG%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cimg%20src%3D%22img/welcome.JPG%22%20alt%3D%22Image%22%20class%3D%22tm-slider-img%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22tm-img-slider-item%22%20href%3D%22img/believe.JPG%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cimg%20src%3D%22img/believe.JPG%22%20alt%3D%22Image%22%20class%3D%22tm-slider-img%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22tm-img-slider-item%22%20href%3D%22img/hello.JPG%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cimg%20src%3D%22img/hello.JPG%22%20alt%3D%22Image%22%20class%3D%22tm-slider-img%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%3C/section%3E%0A%0A%20%20%20%20%20%20%20%20%3Csection%20class%3D%22tm-section-2%20tm-section-mb%22%20id%3D%22tm-section-2%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22row%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22col-xl-4%20col-lg-4%20col-md-6%20mb-lg-0%20mb-md-5%20mb-5%20pr-md-5%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cheader%20class%3D%22text-center%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/header%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ch2%3EMeet%20the%20Team%3C/h2%3E%0A%09%09%09%09%09%3Cp%3EFuture%20Care%20knows%20the%20importance%20of%20a%20strong%20team%2C%20and%20a%20strong%20family.%20Meet%20our%20trusted%20individuals%20here%20for%20you.%3C/p%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ca%20href%3D%22%23tm-section-3%22%20class%3D%22btn%20tm-btn-pad-2%20float-right%22%3ELearn%20More%3C/a%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22col-xl-4%20col-lg-4%20col-md-6%20mb-lg-0%20mb-md-5%20mb-5%20pr-md-5%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cheader%20class%3D%22text-center%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/header%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ch2%3E%3Ca%20href%3D%22https%3A//docs.google.com/forms/d/e/1FAIpQLSe5inHCWmb-8dfjpTZLVVKZBttpK3H3DkhB8QcrHa-xUbxXkg/viewform%3Fusp%3Dsf_link%22%3EJoin%20Today%3C/a%3E%3C/h2%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cp%3E%20Future%20Care%20knows%20the%20value%20of%20community%2C%20where%20together%2C%20we%20can%20do%20so%20much.%20Join%20us%20today%20where%20every%20person%20makes%20a%20difference.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/p%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C%21--a%20href%3D%22%23tm-section-4%22%20class%3D%22btn%20tm-btn-pad-2%20float-right%22%3ELearn%20More%3C/a--%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22col-xl-4%20col-lg-4%20col-md-12%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ch2%3EContact%20Us%3C/h2%3E%0A%09%09%09%09%09%3Cp%3E604%20Black%20Street%2C%20Rolla%2C%20MO%20-%2065401%3Cbr%3E%28573%29%20578-2303%3C/p%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%3C/section%3E%0A%0A%20%20%20%20%20%20%20%20%3C%21--section%20class%3D%22tm-section-3%20tm-section-mb%22%20id%3D%22tm-section-3%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22col-lg-12%20tm-slider-col%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22tm-img-slider%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22tm-img-slider-item%22%20href%3D%22img/gallery-img-01.jpg%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cimg%20src%3D%22img/gallery-img-01.jpg%22%20alt%3D%22Image%22%20class%3D%22tm-slider-img%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22tm-img-slider-item%22%20href%3D%22img/gallery-img-02.jpg%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cimg%20src%3D%22img/gallery-img-02.jpg%22%20alt%3D%22Image%22%20class%3D%22tm-slider-img%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22tm-img-slider-item%22%20href%3D%22img/gallery-img-03.jpg%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cimg%20src%3D%22img/gallery-img-03.jpg%22%20alt%3D%22Image%22%20class%3D%22tm-slider-img%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22tm-img-slider-item%22%20href%3D%22img/gallery-img-04.jpg%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cimg%20src%3D%22img/gallery-img-04.jpg%22%20alt%3D%22Image%22%20class%3D%22tm-slider-img%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%3C/section--%3E%0A%3C%21--%0A%20%20%20%20%20%20%20%20%3Csection%20class%3D%22tm-section-4%20tm-section-mb%22%20id%3D%22tm-section-4%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22row%22%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%3C/section%3E%0A%0A%20%20%20%20%20%20%20%20%3Csection%20class%3D%22tm-section-5%22%20id%3D%22tm-section-5%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22row%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22col-lg-4%20col-md-12%20col-sm-12%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22image%20fit%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cimg%20src%3D%22img/tm-sc4-img-1.jpg%22%20class%3D%22img-fluid%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22col-lg-8%20col-md-12%20col-sm-12%20pl-lg-0%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22media%20tm-media%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cimg%20src%3D%22img/sc4-img-2.jpg%22%20class%3D%22img-responsive%20tm-media-img%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22media-body%20tm-box-5%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ch2%3EEtiam%20tincidunt%20ullamcorper%3C/h2%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cp%20class%3D%22mb-0%22%3EMaecenas%20tempor%20nibh%20sed%20rhoncus%20ullamcorper.%20Ut%20porttitor%20ante%20non%20accumsan%20pretium.%20Maecenas%20iaculis%20arcu%20sed%20porta%20accumsan.%3C/p%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22media%20tm-media%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cimg%20src%3D%22img/sc4-img-3.jpg%22%20class%3D%22img-responsive%20tm-media-img%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22media-body%20tm-box-5%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ch2%3ESed%20et%20finibus%20tortor%3C/h2%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cp%20class%3D%22mb-0%22%3ESuspendisse%20iaculis%20leo%20libero%2C%20ut%20congue%20augue%20feugiat%20eu.%20Nulla%20faucibus%20non%20odio%20sed%20auctor.%20Vestibulum%20a%20tincidunt%20dolor%2C%20eget%20eleifend%20lacus.%3C/p%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22media%20tm-media%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cimg%20src%3D%22img/sc4-img-4.jpg%22%20class%3D%22img-responsive%20tm-media-img%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22media-body%20tm-box-5%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ch2%3EVestibulum%20sit%20amet%3C/h2%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cp%20class%3D%22mb-0%22%3E%20Cras%20aliquet%20urna%20ut%20sapien%20tincidunt%2C%20quis%20malesuada%20elit%20facilisis.%20Vestibulum%20sit%20amet%20tortor%20velit.%20Nam%20elementum%20nibh%20a%20libero%20pharetra%20elementum.%20%3C/p%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%3C/section%3E%0A%0A%20%20%20%20%20%20%20%20%3Csection%20class%3D%22tm-section-6%22%20id%3D%22tm-section-6%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22row%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22col-lg-7%20col-md-7%20col-xs-12%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22contact_message%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cform%20action%3D%22%22%20method%3D%22post%22%20class%3D%22contact-form%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22row%20mb-2%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22form-group%20col-xl-6%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cinput%20type%3D%22text%22%20id%3D%22contact_name%22%20name%3D%22contact_name%22%20class%3D%22form-control%22%20placeholder%3D%22Name%22%20required/%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22form-group%20col-xl-6%20pl-xl-1%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cinput%20type%3D%22email%22%20id%3D%22contact_email%22%20name%3D%22contact_email%22%20class%3D%22form-control%22%20placeholder%3D%22Email%22%20required/%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22form-group%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ctextarea%20id%3D%22contact_message%22%20name%3D%22contact_message%22%20class%3D%22form-control%22%20rows%3D%226%22%20placeholder%3D%22Message%22%20required%3E%3C/textarea%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cbutton%20type%3D%22submit%22%20class%3D%22btn%20%20tm-btn-submit%20float-right%20btn-big%22%3ESend%20It%20Now%3C/button%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/form%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22col-lg-5%20col-md-5%20col-xs-12%20tm-contact-right%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22tm-address-box%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ch2%20class%3D%22mb-4%22%3EContact%20Us%3C/h2%3E%0A%09%09%09%3Cp%20class%3D%22mb-5%22%3EA%20business%20led%20by%20your%20local%20community%2C%20commited%20to%20the%20present%20and%20future%20care%20of%20your%20loved%20ones.%3C/p%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Caddress%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20604%20Black%20Street%2C%20Rolla%2C%20MO%20-%2065401%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cbr%3E%20%28573%29%20578-2303%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/address%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%3C/section%3E%0A--%3E%0A%20%20%20%20%20%20%20%20%3Cfooter%20class%3D%22mt-5%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cp%20class%3D%22text-center%22%3ECopyright%20%A9%202023%20Future%20Care%20LLC%3C/p%3E%0A%20%20%20%20%20%20%20%20%3C/footer%3E%0A%20%20%20%20%3C/div%3E%0A%0A%20%20%20%20%3C%21--%20load%20JS%20files%20--%3E%0A%20%20%20%20%3Cscript%20type%3D%22text/javascript%22%20src%3D%22js/jquery-1.11.3.min.js%22%3E%3C/script%3E%0A%20%20%20%20%3Cscript%20src%3D%22js/popper.min.js%22%3E%3C/script%3E%0A%20%20%20%20%3C%21--%20https%3A//popper.js.org/%20--%3E%0A%20%20%20%20%3Cscript%20src%3D%22js/bootstrap.min.js%22%3E%3C/script%3E%0A%20%20%20%20%3C%21--%20https%3A//getbootstrap.com/%20--%3E%0A%20%20%20%20%3Cscript%20type%3D%22text/javascript%22%20src%3D%22slick/slick.min.js%22%3E%3C/script%3E%0A%20%20%20%20%3C%21--%20Slick%20Carousel%20--%3E%0A%0A%20%20%20%20%3Cscript%3E%0A%20%20%20%20%20%20%20%20function%20setCarousel%28%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20slider%20%3D%20%24%28%27.tm-img-slider%27%29%3B%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20%28slider.hasClass%28%27slick-initialized%27%29%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20slider.slick%28%27destroy%27%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20%28%24%28window%29.width%28%29%20%3E%20991%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20//%20Slick%20carousel%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20slider.slick%28%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20autoplay%3A%20true%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20fade%3A%20true%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20speed%3A%20800%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20infinite%3A%20true%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20slidesToShow%3A%201%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20slidesToScroll%3A%201%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20slider.slick%28%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20autoplay%3A%20true%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20fade%3A%20true%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20speed%3A%20800%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20infinite%3A%20true%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20slidesToShow%3A%201%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20slidesToScroll%3A%201%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20%24%28document%29.ready%28function%20%28%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20%28renderPage%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%24%28%27body%27%29.addClass%28%27loaded%27%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20setCarousel%28%29%3B%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%24%28window%29.resize%28function%20%28%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20setCarousel%28%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%29%3B%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20//%20Close%20menu%20after%20link%20click%0A%20%20%20%20%20%20%20%20%20%20%20%20%24%28%27.nav-link%27%29.click%28function%20%28%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%24%28%27%23mainNav%27%29.removeClass%28%27show%27%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%29%3B%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20//%20https%3A//css-tricks.com/snippets/jquery/smooth-scrolling/%0A%20%20%20%20%20%20%20%20%20%20%20%20//%20Select%20all%20links%20with%20hashes%0A%20%20%20%20%20%20%20%20%20%20%20%20%24%28%27a%5Bhref*%3D%22%23%22%5D%27%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20//%20Remove%20links%20that%20don%27t%20actually%20link%20to%20anything%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20.not%28%27%5Bhref%3D%22%23%22%5D%27%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20.not%28%27%5Bhref%3D%22%230%22%5D%27%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20.click%28function%20%28event%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20//%20On-page%20links%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if%20%28%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20location.pathname.replace%28/%5E%5C//%2C%20%27%27%29%20%3D%3D%20this.pathname.replace%28/%5E%5C//%2C%20%27%27%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%26%26%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20location.hostname%20%3D%3D%20this.hostname%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20//%20Figure%20out%20element%20to%20scroll%20to%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20var%20target%20%3D%20%24%28this.hash%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20target%20%3D%20target.length%20%3F%20target%20%3A%20%24%28%27%5Bname%3D%27%20+%20this.hash.slice%281%29%20+%20%27%5D%27%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20//%20Does%20a%20scroll%20target%20exist%3F%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if%20%28target.length%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20//%20Only%20prevent%20default%20if%20animation%20is%20actually%20gonna%20happen%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20event.preventDefault%28%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%24%28%27html%2C%20body%27%29.animate%28%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20scrollTop%3A%20target.offset%28%29.top%20+%201%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%2C%201000%2C%20function%20%28%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20//%20Callback%20after%20animation%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20//%20Must%20change%20focus%21%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20var%20%24target%20%3D%20%24%28target%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%24target.focus%28%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if%20%28%24target.is%28%22%3Afocus%22%29%29%20%7B%20//%20Checking%20if%20the%20target%20was%20focused%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20return%20false%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%24target.attr%28%27tabindex%27%2C%20%27-1%27%29%3B%20//%20Adding%20tabindex%20for%20elements%20not%20focusable%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%24target.focus%28%29%3B%20//%20Set%20focus%20again%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%29%3B%0A%20%20%20%20%20%20%20%20%7D%29%3B%0A%09fetch%28%22https%3A//script.google.com/macros/s/AKfycbzet7qFs2YnaJVL1yPdG0Ey-w3GSe7qonzloAy6SdwZ1z7TKzjfYobC_7tRX_WwhE3q/exec%22%29.then%28res%20%3D%3E%20res.json%28%29%29.then%28data%20%3D%3E%20document.getElementById%28%27testing%27%29.textContent%20%3D%20JSON.stringify%28data%29.replace%28%27content%27%2C%22%22%29.replace%28%27Timestamp%27%2C%27%27%29.replace%28%27Communication%20For%3A%27%2C%27%27%29.replace%28%27Important%20Message%27%2C%27%27%29.replace%28%27%7B%22%22%3A%5B%5B%22%22%2C%22%22%2C%22%22%5D%2C%27%2C%27%27%29.replace%28%27%5D%7D%27%2C%27%27%29%29%3B%0A%20%20%20%20%3C/script%3E%0A%3Cscript%3E%0A%09%0A%3C/script%3E%0A%3C/body%3E%0A%0A%3C/html%3E%0A'))
+	
 </script>
+</body>
+
+</html>
